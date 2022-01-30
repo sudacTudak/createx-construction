@@ -1,0 +1,10 @@
+@use '../utils' as uts;
+
+.hero {
+    background-color: var(--color-gray);
+    background: url("@img/hero/hero-bg.png") center / cover no-repeat;
+    padding-top: 220px;
+    padding-bottom: 353px;
+    &__content {
+    }
+}

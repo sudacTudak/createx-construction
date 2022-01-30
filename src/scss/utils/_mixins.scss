@@ -1,0 +1,27 @@
+//<ШРИФТЫ>
+
+@mixin font-face($font-family, $url, $weight, $style) {
+    @font-face {
+        font-family: "#{$font-family}";
+        src: local('#{$font-family}'), local('#{$url}'), 
+            url('../fonts/#{$url}.woff2') format("woff2"),
+            url('../fonts/#{$url}.woff') format("woff");
+        font-weight: #{$weight};
+        font-display: swap;
+        font-style: $style;
+    }
+}
+
+//</ШРИФТЫ>
+
+//<ФЛЕКСЫ>
+
+@mixin flex-ver-center() {display: flex; align-items: center;}
+@mixin flex-hor-center() {display: flex; justify-content: center;}
+@mixin flex-all-center() {display: flex; justify-content: center; align-items: center;}
+@mixin flex-all-sb() {display: flex; justify-content: space-between; align-items: center;}
+@mixin flex-col-hor-center() {display: flex; flex-direction:column; align-items: center;}
+@mixin flex-col-ver-center() {display: flex; flex-direction:column; justify-content: center;}
+
+//</ФЛЕКСЫ>
+

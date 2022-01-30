@@ -1,0 +1,24 @@
+
+@use '_mixins' as mix;
+
+//<ШРИФТЫ>
+
+
+//Подключение шрифтов
+
+@include mix.font-face('Ubuntu', 'Ubuntu-Regular', 400, 'normal');
+@include mix.font-face('Ubuntu', 'Ubuntu-Bold', 700, 'normal');
+@include mix.font-face('Lato', 'Lato-Bold', 700, 'normal');
+@include mix.font-face('Lato', 'Lato-Black', 900, 'normal');
+
+
+
+//</Подключение шрифтов>
+
+
+
+//<Шрифт по умолчанию>
+$fontfamily: "Ubuntu", sans-serif;
+//</Шрифт по умолчанию>
+
+//</ШРИФТЫ>

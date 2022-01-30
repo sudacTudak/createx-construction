@@ -1,0 +1,59 @@
+@use '../utils/' as uts;
+
+.btn{
+    border: 1px solid transparent;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--color-light);
+
+    &--outline {
+
+        &-light {
+            border-color: var(--color-light)
+        }
+    }
+
+    &--fill {
+        &-primary {
+            background-color: var(--color-primary);
+        }
+        
+    }
+
+    &--large {
+        padding: 15px 39px;
+    }
+
+    &--regular {
+        padding: 0 32px;
+    }
+
+    &--small {
+        padding: 0 24px;
+    }
+}
+
+
+input[type=text],textarea{-webkit-appearance: none; -moz-appearance: none; appearance: none; }
+
+/*.input{
+	border-top: 1px solid #000;
+	height: 35px;
+	border-radius: 0 !important;
+	width: 100%;
+	display: block;
+	font-size: 15px;
+	padding: 0 20px;
+	background: #f8f7f7;
+}
+
+textarea.input{
+	resize: none;
+	height: 117px;
+	padding: 10px;
+}*/

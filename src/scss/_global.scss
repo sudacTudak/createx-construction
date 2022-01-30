@@ -1,0 +1,46 @@
+//<ОБНУЛЯЮЩИЙ СТИЛЬ>
+@use 'nullstyle';
+//</ОБНУЛЯЮЩИЙ СТИЛЬ>
+
+//<ПОДКЛЮЧЕНИЕ СТИЛЕЙ-ШАБЛОНОВ, UI>
+@use 'components';
+//</ПОДКЛЮЧЕНИЕ СТИЛЕЙ-ШАБЛОНОВ, UI>
+
+//<ПОДКЛЮЧЕНИЕ МИКСИНОВ, ПЕРЕМЕННЫХ, ШРИФТОВ>
+@use 'utils' as uts;
+//</ПОДКЛЮЧЕНИЕ МИКСИНОВ, ПЕРЕМЕННЫХ, ШРИФТОВ>
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ БИБЛИОТЕК>
+@use 'vendors';
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ БИБЛИОТЕК>
+
+
+@use 'header';
+@use 'footer';
+
+
+
+
+//<ОБОЛОЧКА>
+.wrapper {width: 100%; min-height: 100%; overflow: hidden; display: flex; flex-direction: column;}
+.content {flex: 1 1 auto}
+//</ОБОЛОЧКА>
+
+
+
+//<ОСНОВНАЯ СЕТКА>
+.container {max-width: uts.$mw; margin: 0 auto; width: 100%; padding: 0 15px;
+	@media (max-width: (uts.$md1 + px)) {max-width: 970px;}
+	@media (max-width: (uts.$md2 + px)) {max-width: 750px;}
+	@media (max-width: (uts.$md3 + px)) {max-width: 476px;}
+	@media (max-width: (uts.$md4 + px)) {max-width: none;padding:0 10px;}
+}
+
+//</ОСНОВНАЯ СЕТКА>
+
+
+body {
+	font-family: uts.$fontfamily;
+    font-weight: 400;
+}
+

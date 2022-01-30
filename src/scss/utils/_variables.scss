@@ -1,0 +1,28 @@
+//ПЕРЕМЕННЫЕ>
+
+//РАЗМЕРЫ СЕТКИ
+
+$minwidth:320px;
+$mw:1230 + 30 + px;
+$md1:$mw+12;
+$md2:992.98;
+$md3:767.98;
+$md4:479.98;
+
+//РАЗМЕРЫ СЕТКИ
+
+//ПЕРЕМЕННЫЕ ПО УМОЛЧАНИЮ
+
+:root {
+    --color-light: #fff;
+    --color-black: #000;
+    --color-gray: #424551;
+    --color-gray-dark: #1e212c;
+    --color-primary: #ff5a30;
+    --color-storm: #787a80;
+    --transition-time: 0.3s;
+}
+
+//ПЕРЕМЕННЫЕ ПО УМОЛЧАНИЮ
+
+//</ПЕРЕМЕННЫЕ>

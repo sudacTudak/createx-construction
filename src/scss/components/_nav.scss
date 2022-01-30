@@ -1,0 +1,23 @@
+@use '../utils/' as uts;
+
+.nav {
+    
+    &__list {
+        @include uts.flex-ver-center();
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 40px;
+    }
+
+    &__link {
+        font-size: 16px;
+        line-height: 160%;
+        font-weight: 700;
+        color: var(--color-gray);
+
+        &--active {
+            color: var(--color-primary);
+        }
+    }
+}
