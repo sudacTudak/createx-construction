@@ -49,15 +49,15 @@ block content
                     h2.form-values__title.form-title Want to&nbsp;know more? Ask&nbsp;us a&nbsp;question:
                     .form-values__content
                         label.form-values__field.form-field 
-                            span.form-values__caption.form-caption Name
-                            input.form-values__input.form-input(type="text" placeholder="Your name") 
+                            span.form-values__caption.form-field__caption Name
+                            input.form-values__input.form-field__input(type="text" placeholder="Your name") 
                         label.form-values__field.form-field 
-                            span.form-values__caption.form-caption Phone
-                            input.form-values__input.form-input(type="tel" placeholder="Your phone") 
+                            span.form-values__caption.form-field__caption Phone
+                            input.form-values__input.form-field__input(type="tel" placeholder="Your phone") 
                         label.form-values__field.form-values__field--big.form-field
-                            span.form-values__caption.form-caption Message
-                            input.form-values__input.form-input(type="text" placeholder="Your message") 
-                        button.form-values__btn.btn.btn--fill.btn--fill-primary.btn--regular.form-btn(type="submit") Send
+                            span.form-values__caption.form-field__caption Message
+                            input.form-values__input.form-field__input(type="text" placeholder="Your message") 
+                        button.form-values__btn.btn.btn--fill-primary.btn--regular(type="submit") Send
         section.services-section 
             .container
                 .services-section__title.block-title.block-title--center 
@@ -272,3 +272,25 @@ block content
                 .recent-news__explore.learn-more 
                     h4.learn-more__subtitle Explore all our news posts
                     a.learn-more__btn.btn.btn--fill-primary.btn--large(href="#") View all news
+        section.contacts-section 
+            .contacts-section__container.container
+                h2.visually-hidden Contacts 
+                form.contacts-section__form.form-contacts(action="POST") 
+                    h2.form-contacts__title.form-title A&nbsp;quick way to&nbsp;discuss details
+                    label.form-contacts__field.form-field.form-field--contacts
+                        span.form-field__caption Name* 
+                        input.form-field__input(type="text" name="name" placeholder="Your name")
+                    label.form-contacts__field.form-field.form-field--contacts
+                        span.form-field__caption Phone* 
+                        input.form-field__input(type="tel" name="phone" placeholder="Your phone number")
+                    label.form-contacts__field.form-field.form-field--contacts
+                        span.form-field__caption Email 
+                        input.form-field__input(type="email" name="email" placeholder="Your working email")
+                    label.form-contacts__field.form-field.form-field--contacts
+                        span.form-field__caption Message* 
+                        textarea.form-field__input.form-field__input--big(name="message" placeholder="Your message")
+                    label.form-contacts__checkbox.form-checkbox 
+                        input.form-checkbox__input(type="checkbox")
+                        span.form-checkbox__text.
+                            I&nbsp;agree to&nbsp;receive communications from Createx Construction Bureau.
+                    button.form-contacts__btn.btn.btn--fill-primary.btn--regular(type="submit") Send request

@@ -1,0 +1,13 @@
+@use '../utils/' as uts;
+
+.contacts-section {
+    padding: 80px 0;
+    background-color: var(--color-gray-dark);
+    background: url("@img/contacts/contacts-bg.jpg") center / cover no-repeat;
+
+    &__container {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+

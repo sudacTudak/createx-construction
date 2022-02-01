@@ -5,10 +5,6 @@
     background-color: var(--color-light);
     --values-items-gap: 188px;
 
-    &__title {
-
-    }
-
     &__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -90,19 +86,16 @@
 
     &__field {
         width: 260px;
+
+        margin-right: 24px;
+
         &--big {
             width: 414px;
         }
-
-        margin-right: 24px;
     }
 
     &__caption {
         margin-bottom: 8px;
-    }
-
-    &__input {
-
     }
 
     &__btn {
