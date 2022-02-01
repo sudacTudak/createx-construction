@@ -189,5 +189,86 @@ block content
                                     path(fill-rule='evenodd' clip-rule='evenodd' d='M14.7929 6.79289C15.1834 6.40237 15.8166 6.40237 16.2071 6.79289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L16.2071 17.2071C15.8166 17.5976 15.1834 17.5976 14.7929 17.2071C14.4024 16.8166 14.4024 16.1834 14.7929 15.7929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L14.7929 8.20711C14.4024 7.81658 14.4024 7.18342 14.7929 6.79289Z')
                 img.testimonials__image(src=require('@img/testimonials/testimonials-image.png') alt="" aria-hidden="true")
         section.facts 
-            .facts__title.block-title.block-title--center 
-                h2.block-title__title Some facts and figures
+            .container 
+                .facts__title.block-title.block-title--center 
+                    h2.block-title__title Some facts and figures
+                ul.facts__list
+                    li.facts__item
+                        .facts-element 
+                            .facts-element__circle.facts-element__circle--color-orange(data-progress-circle="percent" data-progress-value="98" data-progress-target="100")
+                                svg.circle-anim(viewBox ="-10 -10 320 320")
+                                    circle.progress-bg(r="150" cx="150" cy="150" fill="none" stroke="yellow" stroke-width="15")
+                                    circle.progress(r="150" cx="150" cy="150" fill="none" stroke="crimson" stroke-width="15")
+                                .facts-element__value(data-progress-show) 
+                            span.facts-element__description Totally satisfied clients
+                    li.facts__item
+                        .facts-element 
+                            .facts-element__circle.facts-element__circle--color-radical-red(data-progress-circle="number" data-progress-value="20" data-progress-target="25")
+                                svg.circle-anim(viewBox ="-10 -10 320 320")
+                                    circle.progress-bg(r="150" cx="150" cy="150" fill="none" stroke="yellow" stroke-width="15")
+                                    circle.progress(r="150" cx="150" cy="150" fill="none" stroke="crimson" stroke-width="15")
+                                .facts-element__value(data-progress-show) 
+                            span.facts-element__description Years of&nbsp;experience
+                    li.facts__item
+                        .facts-element 
+                            .facts-element__circle.facts-element__circle--color-blue(data-progress-circle="number" data-progress-value="9452" data-progress-target="12000")
+                                svg.circle-anim(viewBox ="-10 -10 320 320")
+                                    circle.progress-bg(r="150" cx="150" cy="150" fill="none" stroke="yellow" stroke-width="15")
+                                    circle.progress(r="150" cx="150" cy="150" fill="none" stroke="crimson" stroke-width="15")
+                                .facts-element__value(data-progress-show) 
+                            span.facts-element__description Working hours spent
+                    li.facts__item
+                        .facts-element 
+                            .facts-element__circle.facts-element__circle--color-green(data-progress-circle="percent" data-progress-value="100" data-progress-target="100")
+                                svg.circle-anim(viewBox ="-10 -10 320 320")
+                                    circle.progress-bg(r="150" cx="150" cy="150" fill="none" stroke="yellow" stroke-width="15")
+                                    circle.progress(r="150" cx="150" cy="150" fill="none" stroke="crimson" stroke-width="15")
+                                .facts-element__value(data-progress-show) 
+                            span.facts-element__description Succeeded projects
+        section.recent-news 
+            .container
+                .recent-news__title.block-title.block-title--center 
+                    h2.block-title__title Recent news
+                ul.recent-news__list 
+                    li.recent-news__item.recent-news__item--big
+                        article.recent-news__article.recent-article.recent-article--big
+                            +img('recent-news/article_01.jpg', 'Artical 1 Image')(class="recent-article__image")
+                            .recent-article__text 
+                                h3.recent-article__title
+                                    a.recent-article__link(href="#").
+                                        How to&nbsp;Build Climate Change-Resilient Infrastructure 
+                                .recent-article__meta.article-meta
+                                    a.article-meta__item(href="") Industry News
+                                    time.article-meta__item(datatime="2020-06-24 10:00") June 24, 2020
+                                    a.article-meta__item.article-meta__item--comments(href="") 4 comments
+                                p.recent-article__description.
+                                    Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis enim, nibh convallis...
+                    li.recent-news__item
+                        article.recent-news__article.recent-article.recent-article--small
+                            +img('recent-news/article_02.jpg', 'Artical 2 Image')(class="recent-article__image")
+                            .recent-article__text 
+                                h3.recent-article__title
+                                    a.recent-article__link(href="#").
+                                        How Construction Can Help Itself
+                                .recent-article__meta.article-meta
+                                    a.article-meta__item(href="") Innovation
+                                    time.article-meta__item(datatime="2020-06-12 17:30") June 12, 2020
+                                    a.article-meta__item.article-meta__item--comments(href="") No comments
+                                p.recent-article__description.
+                                    Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis enim, nibh convallis...
+                    li.recent-news__item
+                        article.recent-news__article.recent-article.recent-article--small
+                            +img('recent-news/article_03.jpg', 'Artical 3 Image')(class="recent-article__image")
+                            .recent-article__text 
+                                h3.recent-article__title
+                                    a.recent-article__link(href="#").
+                                        Types of&nbsp;Flooring Materials
+                                .recent-article__meta.article-meta
+                                    a.article-meta__item(href="") Company News
+                                    time.article-meta__item(datatime="2019-12-01 12:00") December 1, 2019
+                                    a.article-meta__item.article-meta__item--comments(href="") No comments
+                                p.recent-article__description.
+                                    Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis enim, nibh convallis...
+                .recent-news__explore.learn-more 
+                    h4.learn-more__subtitle Explore all our news posts
+                    a.learn-more__btn.btn.btn--fill-primary.btn--large(href="#") View all news

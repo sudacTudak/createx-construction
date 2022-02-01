@@ -1,6 +1,7 @@
 import '../scss/index.scss'
 import Swiper, {Navigation} from 'swiper';
 import 'swiper/css';
+import './progress';
 import { gridGap } from './cssProperties';
 
 if (module.hot) {

@@ -1,0 +1,110 @@
+@use '../utils/' as uts;
+
+.recent-news {
+    padding-bottom: 120px;
+    background-color: var(--color-light);
+    &__list {
+        display: grid;
+        grid-template: repeat(2, 255px) / repeat(12, 1fr);
+        gap: var(--grid-gap);
+        margin-bottom: 80px;
+    }
+
+    &__item {
+        grid-column: 5 span;
+
+        &--big {
+            grid-column: 7 span;
+            grid-row: 2 span;
+        }
+    }
+
+}
+
+.recent-article {
+    height: 100%;
+    background: var(--color-light);
+    box-shadow: 
+        0px 80px 80px -20px rgba(154, 156, 165, 0.08), 
+        0px 30px 24px -10px rgba(154, 156, 165, 0.05), 
+        0px 12px 10px -6px rgba(154, 156, 165, 0.04), 
+        0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+    border-radius: var(--border-radius);
+
+    &__text {
+        padding: 24px;
+    }
+
+    &__title {
+        margin-bottom: 13px;
+    }
+
+    &__link {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        color: var(--color-gray-dark);
+        transition: color var(--transition-time) ease-in-out;
+
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+
+    &__description {
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-gray);
+    }
+
+    &--small {
+        .recent-article__description {
+            display: none;
+        }
+
+        .recent-article__text {
+            padding: 16px 24px 24px;
+        }
+
+        .recent-article__title {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.article-meta {
+    &__item {
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--color-storm);
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 25px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 1px;
+                height: 11px;
+                color: inherit;
+                background-color: currentColor;
+                top: 2px;
+                right: -13.5px;
+            }
+        }
+
+        &:not(time) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &--comments {
+            background: url("@img/icons/comments.svg") left no-repeat;
+            padding-left: 23px;
+        }
+    }
+}

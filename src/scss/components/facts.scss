@@ -1,7 +1,99 @@
 @use '../utils/' as uts;
 
 .facts {
+    position: relative;
     background-color: var(--color-light);
-    background-image: url("@img/facts/facts-bg.png");
-    padding: 180px 0;
+    padding: 181px 0 180px;
+    overflow: hidden;
+    z-index: -1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: -7px;
+        top: -197px;
+        width: 570px;
+        height: 1065px;
+        background-image: url("@img/facts/facts-bg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0 auto;
+        max-width: 736px;
+        gap: 48px;
+    }
+
+    &__item {
+    }
 }
+
+.facts-element {
+    --progress-stroke: #000;
+    --progress-bg-opacity: 0.3;
+
+    &__circle {
+        position: relative;
+        width: 148px;
+        height: 148px;
+        margin-bottom: 20px;
+
+        svg {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        .progress {
+            stroke: var(--progress-stroke);
+            transform-origin: center;
+            transform: rotate(-90deg) translate(20px, 0px);
+        }
+
+        .progress-bg {
+            stroke: var(--progress-stroke);
+            opacity: var(--progress-bg-opacity);
+        }
+
+        &--color-orange {
+            --progress-stroke: #F89828;
+        }
+
+        &--color-radical-red {
+            --progress-stroke: #F52F6E;
+        }
+
+        &--color-blue {
+            --progress-stroke: #5A87FC;
+        }
+
+        &--color-green {
+            --progress-stroke: #03CEA4;
+        }
+    }
+
+    &__value {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 150%;
+        color: var(--color-gray-dark);
+        transform: translate(-50%, -50%);
+    }
+
+    &__description {
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--color-gray-dark);
+    }
+}
+
