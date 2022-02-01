@@ -1,0 +1,73 @@
+@use '../utils/' as uts;
+
+.testimonials {
+    background-color: #f4f5f7;
+    padding: 120px 0 0;
+
+    &__container {
+        @include uts.flex-sb();
+    }
+
+    &__content {
+        max-width: 612px;
+    }
+
+    &__items {
+        position: relative;
+    }
+
+    &__image {
+        margin-bottom: -61px;
+    }
+
+    &__slider-nav {
+        position: absolute;
+        right: 12px;
+        bottom: 4px;
+    }
+}
+
+.item-testimonials {
+    padding-bottom: 16px;
+    &__image {
+        border-radius: 100%;
+        overflow: hidden;
+        width: 72px;
+        height: 72px;
+        img {
+            display: block;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        margin-bottom: 24px;
+    }
+    
+    &__text {
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-gray);
+        margin-bottom: 26px;
+    }
+}
+
+.testimonials-author {
+    &__name {
+        display: block;
+        padding-right: 110px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-gray-dark);
+        margin-bottom: 4px;
+    }
+
+    &__position {
+        display: block;
+        padding-right: 110px;
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--color-storm);
+    }
+}

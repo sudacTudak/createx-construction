@@ -17,11 +17,16 @@
 //<ФЛЕКСЫ>
 
 @mixin flex-ver-center() {display: flex; align-items: center;}
+@mixin flex-ver-end() {display: flex; align-items: flex-end;}
 @mixin flex-hor-center() {display: flex; justify-content: center;}
 @mixin flex-all-center() {display: flex; justify-content: center; align-items: center;}
 @mixin flex-all-sb() {display: flex; justify-content: space-between; align-items: center;}
+@mixin flex-sb() {display: flex; justify-content: space-between;}
 @mixin flex-col-hor-center() {display: flex; flex-direction:column; align-items: center;}
 @mixin flex-col-ver-center() {display: flex; flex-direction:column; justify-content: center;}
+@mixin flex-col-all-center() {display: flex; flex-direction:column; justify-content: center; align-items: center;}
+@mixin flex-col-start() {display: flex; flex-direction:column; justify-content: flex-start;}
+@mixin flex-col-end() {display: flex; flex-direction:column; justify-content: flex-end;}
 
 //</ФЛЕКСЫ>
 

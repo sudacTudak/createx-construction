@@ -1,0 +1,111 @@
+@use '../utils/' as uts;
+
+.values {
+    padding-top: 120px;
+    background-color: var(--color-light);
+    --values-items-gap: 188px;
+
+    &__title {
+
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--values-items-gap);
+        margin-bottom: 30px;
+    }
+
+    &__item {
+        @include uts.flex-col-hor-center();
+        position: relative;
+        padding-top: 72px;
+        background-position: top center;
+        background-size: 48px 48px;
+        background-repeat: no-repeat;
+
+        &--quality {
+            background-image: url("@img/values/quality.svg");
+        }
+
+        &--safety {
+            background-image: url("@img/values/safety.svg");
+        }
+
+        &--comfort {
+            background-image: url("@img/values/comfort.svg");
+        }
+
+        &:not(:last-child) {
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: calc(var(--values-items-gap) / -2);
+                background-image: url("@img/values/vert-line.svg");
+                width: 1px;
+                height: 100%;
+                transform: translateX(50%);
+            }
+        }
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        color: var(--color-gray-dark);
+        margin-bottom: 8px;
+    }
+
+    &__description {
+        font-size: 16px;
+        line-height: 160%;
+        text-align: center;
+        color: var(--color-storm);
+    }
+
+}
+
+.form-values {
+    position: relative;
+    top: 92px;
+    left: 0;
+    padding: 48px 60px;
+    background: #fff;
+    box-shadow: 
+        0px 80px 80px -20px rgba(154, 156, 165, 0.08), 
+        0px 30px 24px -10px rgba(154, 156, 165, 0.05), 
+        0px 12px 10px -6px rgba(154, 156, 165, 0.04), 
+        0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+    border-radius: var(--border-radius);
+
+    &__title {
+        margin-bottom: 32px;
+    }
+
+    &__content {
+        @include uts.flex-ver-center();
+    }
+
+    &__field {
+        width: 260px;
+        &--big {
+            width: 414px;
+        }
+
+        margin-right: 24px;
+    }
+
+    &__caption {
+        margin-bottom: 8px;
+    }
+
+    &__input {
+
+    }
+
+    &__btn {
+        align-self: flex-end;
+    }
+}

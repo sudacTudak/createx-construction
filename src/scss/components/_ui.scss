@@ -46,7 +46,6 @@
         font-weight: 700;
         font-size: 46px;
         line-height: 130%;
-        text-align: center;
         color: var(--color-gray-dark);
     }
 
@@ -60,12 +59,19 @@
     &--center {
         text-align: center;
     }
+
+    &--slider-nav {
+        margin-bottom: 0;
+        .block-title__title {
+            padding-bottom: 12px;
+        }
+    }
 }
 
 .block-video {
     height: 500px;
     position: relative;
-    border-radius: 4px;
+    border-radius: var(--border-radius);
 
     &::before {
         content: "";
@@ -76,7 +82,7 @@
         bottom: 0;
         right: 0;
         background-color: rgba(#1e212c, 0.6);
-        border-radius: 4px; // Убрать, когда разберешься с видео
+        border-radius: var(--border-radius);
     }
 
     &__play {
@@ -125,8 +131,50 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        background-color: var(--color-gray-dark);
-        border-radius: 4px; // Убрать, когда разберешься с видео
+        border-radius: var(--border-radius);
+    }
+}
+
+.slider-nav {
+    position: relative;
+    z-index: 10;
+    @include uts.flex-ver-center();
+    align-self: flex-end;
+    transform: translate(12px, -1px);
+    &__btn {
+        border-radius: 100%;
+        width: 48px;
+        height: 48px;
+        color: (--color-gray);
+        background-color: transparent;
+        transition: background-color var(--transition-time) ease-in-out, color var(--transition-time) ease-in-out;
+        @include uts.flex-all-center();
+
+        svg {
+            width: 24px;
+            height: 24px;
+            display: block;
+            object-fit: cover;
+            color: inherit;
+            fill: currentColor;
+        }
+
+        &:hover {
+            color: var(--color-light);
+            background-color: var(--color-primary);
+        }
+    }
+}
+
+.learn-more {
+    @include uts.flex-all-center();
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 150%;
+        color: var(--color-gray-dark);
+        margin-right: 40px;
     }
 }
 

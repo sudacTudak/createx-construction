@@ -128,7 +128,7 @@ module.exports = {
         filename: `./js/${getFilename('js')}`,
         path: PATHS.dist,
         publicPath: `auto`,
-        assetModuleFilename: 'img/[hash][ext][query]',
+        assetModuleFilename: 'assets/[hash][ext][query]',
         clean: true,
     },
     resolve: {
@@ -137,7 +137,7 @@ module.exports = {
             '@js': `${PATHS.src}/js`,
             '@src': PATHS.src,
             '@img': `${PATHS.src}/img`,
-            '@icons': `@img/icons`
+            '@assets': `${PATHS.src}/assets`
         }
     },
     optimization: optimization(),
@@ -198,6 +198,10 @@ module.exports = {
             {
                 test: /\.(png|jpe?g|gif|webp|ico)$/i,
                 type: devMode? 'asset/resource' : 'asset',
+            },
+            {
+                test: /\.(mp4)$/i,
+                type: 'asset',
             },
             {
                 test: /\.(ttf|woff2?|eot|otf|svg)$/i,

@@ -1,0 +1,106 @@
+@use '../utils/' as uts;
+
+.services-section {
+    padding: 215px 0 80px;
+    background-color: #f4f5f7;
+    background: url("@img/services/services-bg.png") center / cover no-repeat;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--grid-gap);
+        margin-bottom: 80px;
+    }
+}
+
+.item-service {
+    height: 100%;
+    position: relative;
+    display: block;
+    background-color: var(--color-light);
+    border: 1px solid #E5E8ED;
+    box-shadow: 
+        0px 80px 80px -20px rgba(154, 156, 165, 0.08), 
+        0px 30px 24px -10px rgba(154, 156, 165, 0.05), 
+        0px 12px 10px -6px rgba(154, 156, 165, 0.04), 
+        0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+    border-radius: var(--border-radius);
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-image: url("@img/services/service-item-bg-empty.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0;
+        z-index: 3;
+        transition: opacity var(--transition-time) ease-in;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(#1e212c, 0.6);
+        opacity: 0;
+        z-index: 5;
+        transition: opacity var(--transition-time) ease-in;
+    }
+
+    &--design {
+        &::before {
+            background-image: url("@img/services/service-item-bg-construct.jpg");
+        }
+    }
+    
+    &__content {
+        position: relative;
+        @include uts.flex-col-hor-center();
+        padding: 90px 10px;
+        z-index: 10;
+    }
+
+    &__icon {
+        margin-bottom: 24px;
+        width: 52px;
+        height: 52px;
+        object-fit: cover;
+        fill: var(--color-primary);
+        transition: fill var(--transition-time) ease-in;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        text-align: center;
+        color: var(--color-gray-dark);
+        transition: color var(--transition-time) ease-in;
+    }
+
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
+
+        &::after {
+            opacity: 1;
+        }
+
+        .item-service__icon {
+            fill: var(--color-light);
+        }
+
+        .item-service__subtitle {
+            color: var(--color-light);
+        }
+    }
+}

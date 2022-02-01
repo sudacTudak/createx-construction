@@ -1,0 +1,7 @@
+@use '../utils/' as uts;
+
+.facts {
+    background-color: var(--color-light);
+    background-image: url("@img/facts/facts-bg.png");
+    padding: 180px 0;
+}
