@@ -1,0 +1,32 @@
+@use '../utils' as uts;
+
+.breadcrumps {
+    display: flex;
+    &__item {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 24px;
+
+            &:after {
+                content: "/";
+                position: absolute;
+                right: -15px;
+                top: 3px;
+                color: #9a9ca5;
+            }
+        }
+    }
+
+    &__link {
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--color-gray);
+
+        &:not([href]) {
+            color: #9a9ca5;
+        }
+
+        
+    }
+}

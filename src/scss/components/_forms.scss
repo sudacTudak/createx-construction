@@ -64,7 +64,7 @@
     }
 
     &__input {
-        background-color: #f4f5f7;
+        background-color: var(--color-athens);
         border: 1px solid #d7dadd;
         border-radius: var(--border-radius);
         padding: 11px 16px 12px;
@@ -148,7 +148,7 @@
     }
 
     &__input:disabled + &__text::before {
-        background: #F4F5F7;
+        background: var(--color-athens);
     }
 
     &__input:disabled + &__text {

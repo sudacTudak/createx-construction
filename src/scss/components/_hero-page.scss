@@ -1,0 +1,16 @@
+@use '../utils' as uts;
+
+.page-hero {
+    background-color: var(--color-athens);
+    padding: 152px 0 178px;
+
+    &__breadcrumps {
+        margin-bottom: 41px;
+    }
+
+    &--services {
+        background-image: url("@img/hero-services/hero-services-bg.png");
+        background-position: right -9px top;
+        background-repeat: no-repeat;
+    }
+}

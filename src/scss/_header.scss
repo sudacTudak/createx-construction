@@ -8,7 +8,6 @@
 //</ПОДКЛЮЧЕНИЕ МИКСИНОВ, ПЕРЕМЕННЫХ, ШРИФТОВ>
 
 
-header{}
 //===============================================
 .header {
     padding-top: 23px;
@@ -28,8 +27,6 @@ header{}
     &__container {
         @include uts.flex-all-sb();
     }
-
-    &__logo {}
 
     &__menu {
         margin-left: -113px;

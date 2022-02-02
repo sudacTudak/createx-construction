@@ -1,0 +1,57 @@
+@use '../utils' as uts;
+
+.services {
+    background-color: var(--color-light);
+    background: 
+        url("@img/services-content/services-content-bg_01.png") right -9px top 530px no-repeat, 
+        url("@img/services-content/services-content-bg_02.png") left -8px bottom -247px no-repeat;
+    padding-top: 120px;
+    padding-bottom: 179px;
+
+    &__item {
+        flex: 1 1 100%;
+        @include uts.flex-ver-center();
+        margin: 0 -40px;
+        &:not(:last-child) {
+            margin-bottom: 120px;
+        }
+        
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+.item-service {
+    
+
+    &__column {
+        padding: 0 40px;
+    }
+
+    &__image {
+        border-radius: var(--border-radius);
+        overflow: hidden;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 150%;
+        color: var(--color-gray-dark);
+        margin-bottom: 24px;
+        max-width: 575px;
+    }
+
+    &__description {
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-storm);
+        margin-bottom: 48px;
+        max-width: 575px;
+    }
+
+    &__btn {
+        display: inline-block;
+    }
+}

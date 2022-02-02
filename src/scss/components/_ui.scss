@@ -3,9 +3,8 @@
 //<UI>==============================
 
 .block-main {
-    max-width: 595px;
-
     &__title {
+        max-width: 600px;
         font-weight: 700;
         font-size: 72px;
         line-height: 130%;
@@ -20,6 +19,7 @@
     }
 
     &__description {
+        max-width: 600px;
         font-size: 20px;
         line-height: 150%;
     }
@@ -33,9 +33,10 @@
         }
     }
 
-    &--light {
-        .block-main__title, .block-main__text {
+    &--home {
+        .block-main__title, .block-main__description {
             color: var(--color-light);
+            max-width: 595px;
         }
     }
 }
