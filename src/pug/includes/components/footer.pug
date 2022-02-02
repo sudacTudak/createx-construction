@@ -1,1 +1,59 @@
 footer.footer
+    .footer__container.container
+        .footer__about.footer-about
+            .footer-about__top 
+                a.footer-about__logo 
+                    +img('footer/logo-footer.svg', 'Createx Logo')
+                ul.footer-about__social.social-footer 
+                    li.social-footer__item 
+                        a.social-footer__link 
+                            +img('footer/whatsapp.svg', 'Whatshapp')
+                    li.social-footer__item 
+                        a.social-footer__link 
+                            +img('footer/messanger.svg', 'Messanger')
+                    li.social-footer__item 
+                        a.social-footer__link 
+                            +img('footer/facebook.svg', 'Facebook')
+                    li.social-footer__item 
+                        a.social-footer__link 
+                            +img('footer/twitter.svg', 'Twitter')
+                    li.social-footer__item 
+                        a.social-footer__link 
+                            +img('footer/youtube.svg', 'YouTube')
+            p.footer-about__description.
+                Createx Construction Bureau has been successfully operating in&nbsp;the USA construction market since 2000. We&nbsp;are proud to&nbsp;offer you quality construction and exemplary service. Our mission is&nbsp;to&nbsp;set the highest standards for construction sphere.
+        form.footer__form.form-footer 
+            h3.form-footer__title Let&rsquo;s stay in&nbsp;touch
+            .form-footer__body 
+                label.form-footer__field.form-field
+                    input.form-footer__input.form-field__input.form-field__input--dark(type="email" placeholder="Your email address")
+                button.form-footer__btn.btn.btn--fill-primary Subscribe
+            .form-footer__description.
+                *Subscribe to&nbsp;our newsletter to&nbsp;receive communications and early updates from Createx Construction Bureau.
+        address.footer__contacts.contacts-footer
+            h3.contacts-footer__title.title-footer Head Office
+            span.contacts-footer__item #[span.contacts-footer__name Address]: 8502 Preston Rd. Inglewood, New York
+            span.contacts-footer__item #[span.contacts-footer__name Call]: #[a(href="tel:4055550128") (405) 555-0128]
+            span.contacts-footer__item #[span.contacts-footer__name Email]: #[a(href="mailto:hello@createx.com") hello@createx.com]
+        nav.footer__nav.nav-footer(title="secondary navigation") 
+            .nav-footer__column 
+                h3.nav-footer__title.title-footer Who we&nbsp;are
+                ul.nav-footer__list 
+                    li.nav-footer__item 
+                        a.nav-footer__link(href="#") About&nbsp;Us
+                    li.nav-footer__item 
+                        a.nav-footer__link(href="#") Available Positions
+                    li.nav-footer__item 
+                        a.nav-footer__link(href="#") Contacts
+            .nav-footer__column 
+                h3.nav-footer__title.title-footer Our Experience
+                ul.nav-footer__list 
+                    li.nav-footer__item 
+                        a.nav-footer__link(href="#") Services
+                    li.nav-footer__item 
+                        a.nav-footer__link(href="#") Work
+                    li.nav-footer__item 
+                        a.nav-footer__link(href="#") News
+        small.footer__copyright.
+            &copy;&nbsp;All rights reserved. Made with #[span by Createx Studio]
+

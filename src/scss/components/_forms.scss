@@ -79,6 +79,11 @@
             line-height: 150%;
             color: #9A9CA5;
         }
+
+        &--dark {
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
     }
 
     &--contacts {
@@ -99,7 +104,7 @@
     &__text {
         position: relative;
         display: inline-block;
-        padding-left: 27px;
+        padding-left: 27.5px;
         font-size: 14px;
         line-height: 150%;
         color: var(--color-gray);

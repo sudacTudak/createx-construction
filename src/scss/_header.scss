@@ -18,6 +18,13 @@ header{}
         background-color: var(--color-light);
     }
 
+    &--page {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
     &__container {
         @include uts.flex-all-sb();
     }
