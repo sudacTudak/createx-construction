@@ -1,0 +1,82 @@
+@use '../utils' as uts;
+
+.how-we-do {
+    padding: 121px 0 119px;
+
+    &__list {
+        gap: var(--grid-gap);
+        counter-reset: section;
+    }
+
+    &__item {
+        position: relative;
+        grid-column: 3 span;
+
+        &:hover {
+            
+            .how-we-do__counter {
+                color: var(--color-primary);
+
+                &::before {
+                    background-color: rgba(255, 90, 48, 0.12);
+                }
+
+                &::after {
+                    background-color: rgba(255, 90, 48, 0.06);
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            background: url("@img/how-we-do/line.svg") right -4px top 28px no-repeat;
+        }
+    }
+
+    &__counter {
+        position: relative;
+        display: inline-block;
+        font-weight: 700;
+        font-size: 46px;
+        line-height: 130%;
+        color: #d7dadd;
+        margin-bottom: 15px;
+        border-radius: 50%;
+        transition: color var(--transition-time) ease-in-out;
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 50%;
+            background-color: rgba(255, 90, 48, 0);
+            border-radius: 100%;
+            transform: translate(-50%, -50%);
+            transition: background-color var(--transition-time) ease-in-out;
+        }
+
+        &::before {
+            width: 84px;
+            height: 84px;
+        }
+
+        &::after {
+            width: 116px;
+            height: 116px;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        color: var(--color-gray-dark);
+        margin-bottom: 10px;
+    }
+
+    &__description {
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-storm);
+    }
+}

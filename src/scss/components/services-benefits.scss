@@ -1,15 +1,19 @@
 @use '../utils/' as uts;
 
-.values {
-    padding-top: 120px;
-    background-color: var(--color-light);
+.services-benefits {
+    padding-top: 80px;
+    background-color: var(--color-gray-dark);
     --values-items-gap: 188px;
+
+    &__title {
+        color: var(--color-light);
+    }
 
     &__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: var(--values-items-gap);
-        margin-bottom: 30px;
+        margin-bottom: 90px;
     }
 
     &__item {
@@ -20,16 +24,16 @@
         background-size: 48px 48px;
         background-repeat: no-repeat;
 
-        &--quality {
-            background-image: url("@img/values/quality.svg");
+        &--fixed-terms-cost {
+            background-image: url("@img/services-benefits/icon_01.svg");
         }
 
-        &--safety {
-            background-image: url("@img/values/safety.svg");
+        &--qualified-workers {
+            background-image: url("@img/services-benefits/icon_02.svg");
         }
 
-        &--comfort {
-            background-image: url("@img/values/comfort.svg");
+        &--supervision-control {
+            background-image: url("@img/services-benefits/icon_03.svg");
         }
 
         &:not(:last-child) {
@@ -38,7 +42,7 @@
                 position: absolute;
                 top: 0;
                 right: calc(var(--values-items-gap) / -2);
-                background-image: url("@img/values/vert-line.svg");
+                background-image: url("@img/services-benefits/vert-line.svg");
                 width: 1px;
                 height: 100%;
                 transform: translateX(50%);
@@ -50,7 +54,7 @@
         font-weight: 700;
         font-size: 20px;
         line-height: 150%;
-        color: var(--color-gray-dark);
+        color: var(--color-light);
         margin-bottom: 8px;
     }
 
@@ -58,43 +62,18 @@
         font-size: 16px;
         line-height: 160%;
         text-align: center;
-        color: var(--color-storm);
+        color: var(--color-light);
+        opacity: 0.6;
     }
-
-}
-
-.form-values {
-    position: relative;
-    top: 92px;
-    left: 0;
-    padding: 48px 60px;
-    background: #fff;
-    @include uts.box-shadow();
-    border-radius: var(--border-radius);
-
-    &__title {
-        margin-bottom: 32px;
-    }
-
-    &__content {
-        @include uts.flex-ver-center();
-    }
-
-    &__field {
-        width: 260px;
-
-        margin-right: 24px;
-
-        &--big {
-            width: 414px;
-        }
-    }
-
-    &__caption {
-        margin-bottom: 8px;
+    
+    &__bottom {
+        margin-bottom: -14px;
     }
 
     &__btn {
-        align-self: flex-end;
+        display: inline-block;
+        max-width: 390px;
+        width: 100%;
+        transform: translateY(12px);
     }
 }

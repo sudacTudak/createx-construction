@@ -1,0 +1,19 @@
+extends ./pug/layout/main
+
+block append vars
+    - var siteTitle = 'Createx Construction';
+    - var pageClass = 'index-page';
+
+block content
+    main.page
+        section.page-hero.page-hero--work
+            .container 
+                ul.page-hero__breadcrumps.breadcrumps
+                    li.breadcrumps__item 
+                        a.breadcrumps__link(href="index.html") Homepage
+                    li.breadcrumps__item 
+                        a.breadcrumps__link Work
+                .page-hero__content.block-main
+                    h1.block-main__title Our Work
+                    p.block-main__description.
+                        Our portfolio represents 20&nbsp;years of&nbsp;construction experience backed by&nbsp;a&nbsp;passion for perfect client service, quality and innovations in&nbsp;consctuction industry.

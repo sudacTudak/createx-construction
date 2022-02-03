@@ -1,6 +1,14 @@
 @use 'global';
 @use 'utils' as uts;
 
-@use 'components/breadcrumps.scss';
+@use 'components/breadcrumps';
+@use 'components/item-portfolio';
+
 @use 'components/hero-page.scss';
+@use 'components/we-offer.scss';
+@use 'components/how-we-do.scss';
+@use 'components/services-benefits.scss';
+@use 'components/related-projects.scss';
+@use 'components/pricing.scss';
+@use 'components/partners.scss';
 @use 'components/contacts-section.scss';

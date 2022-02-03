@@ -61,6 +61,17 @@
         text-align: center;
     }
 
+    &--light {
+        .block-title__title {
+            color: var(--color-light);
+        }
+
+        .block-title__description {
+            color: var(--color-light);
+            opacity: 0.6;
+        }
+    }
+
     &--slider-nav {
         margin-bottom: 0;
         .block-title__title {

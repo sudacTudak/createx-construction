@@ -1,7 +1,7 @@
-@use '../utils/' as uts;
+@use '../utils' as uts;
 
-.portfolio {
-    padding: 120px 0;
+.related-projects {
+    padding: 180px 0 101px;
     background-color: var(--color-light);
     &__top {
         @include uts.flex-all-sb();
@@ -23,3 +23,4 @@
         @include uts.flex-all-center;
     }
 }
+

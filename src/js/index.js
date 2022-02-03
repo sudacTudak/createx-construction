@@ -2,7 +2,7 @@ import '../scss/index.scss'
 import Swiper, {Navigation} from 'swiper';
 import 'swiper/css';
 import './progress';
-import { gridGap } from './cssProperties';
+import { gridGap, transitionTime } from './cssProperties';
 
 if (module.hot) {
 	module.hot.accept()
@@ -12,7 +12,7 @@ if (module.hot) {
 
 const sliderPortfolio = new Swiper('.portfolio__works', {
     modules: [Navigation],
-    speed: 300,
+    speed: transitionTime,
     loop: true,
     slidesPerView: 3,
     spaceBetween: gridGap,
@@ -24,7 +24,7 @@ const sliderPortfolio = new Swiper('.portfolio__works', {
 
 const sliderTestimonials = new Swiper('.testimonials__items', {
     modules: [Navigation],
-    speed: 300,
+    speed: transitionTime,
     slidesPerView: 1,
     loop: true,
     navigation: {

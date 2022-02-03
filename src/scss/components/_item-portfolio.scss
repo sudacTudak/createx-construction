@@ -1,0 +1,51 @@
+@use '../utils' as uts;
+
+.item-portfolio{
+    background-color: var(--color-light);
+    border-radius: var(--border-radius);
+    display: block;
+    @include uts.box-shadow();
+    overflow: hidden;
+    max-height: 440px;
+
+    &__img {
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    &__content {
+        @include uts.flex-col-hor-center;
+        background-color: var(--color-light);
+        text-align: center;
+        padding-top: 16px;
+        padding-bottom: 24px;
+        transform: translateY(0);
+        transition: transform var(--transition-time) ease-in-out;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        color: var(--color-gray-dark);
+        margin-bottom: 4px;
+        padding: 0 10px;
+    }
+
+    &__description {
+        font-size: 14px;
+        padding: 0 10px;
+        line-height: 150%;
+        color: var(--color-storm);
+    }
+
+    &__btn {
+        margin-top: 25px;
+    }
+
+    &:hover {
+        .item-portfolio__content {
+            transform: translateY(-69px);
+        }
+    }
+}

@@ -1,0 +1,96 @@
+@use '../utils' as uts;
+
+.pricing {
+    padding: 80px 0 40px;
+    background: var(--color-athens) url("@img/pricing/pricing-bg.png") left -8px top no-repeat;
+}
+
+.table-wrapper {
+    border-radius: var(--border-radius);
+    background: var(--color-light);
+    border: 1px solid var(--color-gray-cod);
+    @include uts.box-shadow();
+}
+
+.table-pricing {
+    border-collapse: collapse;
+    width: 100%;
+
+    &__heading {
+        padding: 31px 0 24px;
+
+        &:first-child {
+            padding: 31px 24px 24px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 150%;
+            color: var(--color-gray-dark);
+            vertical-align: bottom;
+        }
+    }
+
+    &__subtitle {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 150%;
+        color: var(--color-gray-dark);
+        margin-bottom: 2px;
+    }
+
+    &__cost {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 150%;
+        color: var(--color-storm);
+    }
+
+    &__body {
+        .table-pricing__row {
+            &:nth-child(odd) {
+                background-color: var(--color-athens);
+            }
+
+            &:last-child {
+                .table-pricing__col {
+                    padding-top: 34px;
+                    padding-bottom: 31px;
+                }
+            }
+        }
+    }
+
+    &__col {
+        padding: 16px 0px 16px 8px;
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-gray);
+        text-align: center;
+        vertical-align: middle;
+
+        &:first-child {
+            text-align: left;
+            padding-left: 23px;
+        }
+    }
+
+    &__check {
+        display: inline-block;
+        vertical-align: middle;
+        width: 24px;
+        height: 24px;
+        font-size: 0;
+        background: url("@img/pricing/check.svg") center center / cover no-repeat;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-gray);
+    }
+
+    &__btn {
+        padding: 7px 23px;
+    }
+}

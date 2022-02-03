@@ -1,6 +1,8 @@
 @use 'global';
 @use 'utils' as uts;
 
+@use 'components/item-portfolio';
+
 @use 'components/hero-main';
 @use 'components/about-section.scss';
 @use 'components/values.scss';

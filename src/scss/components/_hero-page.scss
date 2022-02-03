@@ -2,7 +2,7 @@
 
 .page-hero {
     background-color: var(--color-athens);
-    padding: 152px 0 178px;
+    
 
     &__breadcrumps {
         margin-bottom: 41px;
@@ -11,6 +11,20 @@
     &--services {
         background-image: url("@img/hero-services/hero-services-bg.png");
         background-position: right -9px top;
+        background-repeat: no-repeat;
+        padding: 152px 0 178px;
+    }
+
+    &--service {
+        background-image: url("@img/hero-service/hero-service-bg.png");
+        background-position: right -7px center;
+        background-repeat: no-repeat;
+        padding: 152px 0 114px;
+    }
+
+    &--work {
+        background-image: url("@img/hero-work/hero-work-bg.png");
+        background-position: right center;
         background-repeat: no-repeat;
     }
 }
