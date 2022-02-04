@@ -28,4 +28,12 @@
         background-repeat: no-repeat;
         padding: 152px 0px 177px;
     }
+
+    &--work-inner {
+        background-color: var(--color-light);
+        background-image: url("@img/hero-work-inner/hero-work-inner-bg.png");
+        background-position: right -9px top 48px;
+        background-repeat: no-repeat;
+        padding: 152px 0 80px;
+    }
 }

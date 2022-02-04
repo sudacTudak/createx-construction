@@ -18,6 +18,7 @@
 
 @mixin flex-ver-center() {display: flex; align-items: center;}
 @mixin flex-ver-end() {display: flex; align-items: flex-end;}
+@mixin flex-hor-end() {display: flex; justify-content: flex-end;}
 @mixin flex-hor-center() {display: flex; justify-content: center;}
 @mixin flex-all-center() {display: flex; justify-content: center; align-items: center;}
 @mixin flex-all-sb() {display: flex; justify-content: space-between; align-items: center;}

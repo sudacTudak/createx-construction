@@ -1,0 +1,62 @@
+@use '../utils' as uts;
+
+.project-goal {
+    background-color: var(--color-light);
+    padding: 60px 0 119px;
+
+    &__column {
+        grid-column: 6 span;
+
+        &--right {
+            @include uts.flex-hor-end;
+        }
+    }
+
+    &__title {
+        margin-bottom: 39px;
+    }
+
+    &__description {
+        font-size: 18px;
+        line-height: 150%;
+        color: var(--color-gray);
+        max-width: 610px;
+        padding-right: 30px;
+
+        &:not(:last-child) {
+            margin-bottom: 27px;
+        }
+    }
+}
+
+.info-goal {
+    background-color: var(--color-light);
+    @include uts.box-shadow();
+    border-radius: var(--border-radius);
+    width: 495px;
+    min-height: 275px;
+    padding: 0px 40px 20px 60px;
+
+    &__item {
+        display: flex;
+
+        &:not(:last-child) {
+            margin-bottom: 17px;
+        }
+    }
+
+    &__field {
+        width: 130px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-gray-dark);
+        text-transform: uppercase;
+    }
+
+    &__value {
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-storm);
+    }
+}

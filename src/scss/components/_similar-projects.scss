@@ -1,0 +1,22 @@
+@use '../utils' as uts;
+
+.similar-projects {
+    padding-top: 180px;
+    padding-bottom: 120px;
+
+    &__top {
+        position: relative;
+        margin-bottom: 48px;
+    }
+
+    &__slider-nav {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    &__works {
+        margin-bottom: 80px;
+    }
+
+}

@@ -1,10 +1,6 @@
 import '../scss/work.scss';
 import Tabs from './vendors/Tabs';
 
-if (module.hot) {
-	module.hot.accept()
-}
-
 const loadMoreBtn = document.querySelector('.load-more-portfolio__btn');
 const activeTabsItems = document.querySelectorAll('.tabs__item--active');
 const activeTabsItemsCount = activeTabsItems.length;
