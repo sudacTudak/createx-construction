@@ -1,25 +1,135 @@
-@use '../utils/' as uts;
+@use '../utils' as uts;
+@use '../vendors/tabs.scss';
 
 .portfolio {
-    padding: 120px 0;
+    padding-bottom: 99px;
     background-color: var(--color-light);
-    &__top {
-        @include uts.flex-all-sb();
-        margin-bottom: 48px;
+
+    &__tabs-nav {
+        margin-bottom: 60px;
     }
 
-    &__title {
-        max-width: 705px;
+    &__tabs {
+
     }
 
-    &__works {
-        .swiper-wrapper {
-            padding: 0 30px 79px;
-            margin: 0 -30px;
+    &__tabs-items {
+        
+    }
+
+    &__load-more {
+        margin-top: 62px;
+    }
+}
+
+.tabs-nav-portfolio {
+    --nav-gap: 20px;
+    
+    @include uts.flex-ver-center();
+    transform: translateY(-59px);
+
+    &__item {
+        flex: 0 1 25%;
+
+        &:not(:last-child) {
+            margin-right: var(--nav-gap);
         }
     }
 
-    &__explore {
-        @include uts.flex-all-center;
+    &__btn {
+        width: 100%;
+        background-color: var(--color-light);
+        @include uts.flex-col-all-center();
+        @include uts.box-shadow();
+        border-radius: var(--border-radius);
+        color: var(--color-primary);
+        min-height: 154px;
+        padding: 15px 10px;
+        transition: 
+            color var(--transition-time) ease-in-out, 
+            background-color var(--transition-time) ease-in-out;
+    }
+
+    &__icon {
+        color: inherit;
+        fill: currentColor;
+        display: block;
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-manatee);
+        transition: color var(--transition-time) ease-in-out;
+        text-align: center;
+    }
+
+    .nav-tabs__btn {
+        &--active{
+            color: var(--color-light);
+            background-color: var(--color-primary);
+            box-shadow: 
+                0px 60px 80px -20px rgba(255, 90, 48, 0.16), 
+                0px 26px 24px -10px rgba(255, 90, 48, 0.1), 
+                0px 12px 10px -6px rgba(255, 90, 48, 0.08), 
+                0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+
+            .tabs-nav-portfolio__text {
+                color: var(--color-light);
+            }
+        }
     }
 }
+
+.tabs-portfolio {
+    grid-template: auto / repeat(12, 1fr);
+    gap: var(--grid-gap);
+
+    &__item {
+        grid-column: 4 span;
+    }
+
+    .tabs__item {
+        
+        &--hidden-more {
+            display: none;
+        }
+    
+        &--visible-more {
+            display: block !important;
+        }
+    }
+}
+
+.load-more-portfolio {
+    &__btn {
+        background-color: transparent;
+        display: inline-flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-gray);
+
+        img {
+            display: block;
+            width: 24px;
+            height: 24px;
+            object-fit: cover;
+            margin-right: 16px;
+            transition: transform var(--transition-time) ease-in-out;
+        }
+
+        &--active {
+            img {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+

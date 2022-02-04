@@ -1,0 +1,17 @@
+.tabs {
+    &__item {
+        display: none;
+
+        &--active {
+            display: block;
+        }
+    }
+}
+
+.nav-tabs {
+    &__btn {
+        &--active {
+            pointer-events: none;
+        }
+    }
+}

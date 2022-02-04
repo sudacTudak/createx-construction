@@ -1,0 +1,11 @@
+.clients {
+    padding: 140px 0 121px;
+    background-color: var(--color-light);
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 102px;
+    }
+
+}
