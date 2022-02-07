@@ -5,7 +5,12 @@
     &__list {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
-        gap: 102px;
+        column-gap: 102px;
+        row-gap: 40px;
     }
 
+    &--about-us {
+        padding: 120px 0 100px;
+        background-color: var(--color-light);
+    }
 }

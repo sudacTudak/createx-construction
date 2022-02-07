@@ -1,0 +1,41 @@
+extends ./pug/layout/main
+
+block append vars
+    - var siteTitle = 'Createx Construction';
+    - var pageClass = 'index-page';
+
+block content
+    main.page
+        section.page-hero.page-hero--news
+            .container 
+                ul.page-hero__breadcrumps.breadcrumps
+                    li.breadcrumps__item 
+                        a.breadcrumps__link(href="index.html") Homepage
+                    li.breadcrumps__item 
+                        a.breadcrumps__link News
+                .page-hero__content.block-main
+                    h1.block-main__title News
+                    p.block-main__description.
+                        Stay tuned with our news, expert tips and articles.
+        section.contacts-section 
+            .contacts-section__container.container
+                h2.visually-hidden Contacts 
+                form.contacts-section__form.form-contacts(action="POST") 
+                    h2.form-contacts__title.form-title A&nbsp;quick way to&nbsp;discuss details
+                    label.form-contacts__field.form-field.form-field--contacts
+                        span.form-field__caption Name* 
+                        input.form-field__input(type="text" name="name" placeholder="Your name")
+                    label.form-contacts__field.form-field.form-field--contacts
+                        span.form-field__caption Phone* 
+                        input.form-field__input(type="tel" name="phone" placeholder="Your phone number")
+                    label.form-contacts__field.form-field.form-field--contacts
+                        span.form-field__caption Email 
+                        input.form-field__input(type="email" name="email" placeholder="Your working email")
+                    label.form-contacts__field.form-field.form-field--contacts
+                        span.form-field__caption Message* 
+                        textarea.form-field__input.form-field__input--big(name="message" placeholder="Your message")
+                    label.form-contacts__checkbox.form-checkbox 
+                        input.form-checkbox__input(type="checkbox")
+                        span.form-checkbox__text.
+                            I&nbsp;agree to&nbsp;receive communications from Createx Construction Bureau.
+                    button.form-contacts__btn.btn.btn--fill-primary.btn--regular(type="submit") Send request

@@ -1,0 +1,149 @@
+extends ./pug/layout/main
+
+block append vars
+    - var siteTitle = 'Createx Construction';
+    - var pageClass = 'index-page';
+
+block content
+    main.page
+        section.page-hero.page-hero--positions
+            .container 
+                ul.page-hero__breadcrumps.breadcrumps
+                    li.breadcrumps__item 
+                        a.breadcrumps__link(href="index.html") Homepage
+                    li.breadcrumps__item 
+                        a.breadcrumps__link(href="abouts-us.html") About Us
+                    li.breadcrumps__item 
+                        a.breadcrumps__link Available Positions
+                .page-hero__content.block-main
+                    h1.block-main__title Available Positions
+                    p.block-main__description Build your career with Createx Construction Bureau.
+        section.positions-content
+            h2.visually-hidden Available Positions
+            .container
+                .positions-content__info.grid 
+                    .positions-content__column.positions-content__column--left
+                        ul.positions-content__list 
+                            li.positions-content__item
+                                article.item-positions
+                                    .item-positions__info 
+                                        .item-positions__meta.meta-positions 
+                                            span.meta-positions__item.meta-positions__item--city New York
+                                            span.meta-positions__item.meta-positions__item--time Full Time
+                                        h3.item-positions__post Heavy Equipment Operator
+                                    a.item-positions__link.btn.btn--outline-primary.btn--regular(href="#") Apply now
+                            li.positions-content__item
+                                article.item-positions
+                                    .item-positions__info 
+                                        .item-positions__meta.meta-positions 
+                                            span.meta-positions__item.meta-positions__item--city San Francisco
+                                            span.meta-positions__item.meta-positions__item--time Full Time
+                                        h3.item-positions__post Financial Compliance Analyst
+                                    a.item-positions__link.btn.btn--outline-primary.btn--regular(href="#") Apply now
+                            li.positions-content__item
+                                article.item-positions
+                                    .item-positions__info 
+                                        .item-positions__meta.meta-positions 
+                                            span.meta-positions__item.meta-positions__item--city New Jersey
+                                            span.meta-positions__item.meta-positions__item--time Full Time
+                                        h3.item-positions__post Project Manager - Buildings
+                                    a.item-positions__link.btn.btn--outline-primary.btn--regular(href="#") Apply now
+                            li.positions-content__item
+                                article.item-positions
+                                    .item-positions__info 
+                                        .item-positions__meta.meta-positions 
+                                            span.meta-positions__item.meta-positions__item--city New York
+                                            span.meta-positions__item.meta-positions__item--time Part Time
+                                        h3.item-positions__post Environment Specialist
+                                    a.item-positions__link.btn.btn--outline-primary.btn--regular(href="#") Apply now
+                            li.positions-content__item
+                                article.item-positions
+                                    .item-positions__info 
+                                        .item-positions__meta.meta-positions 
+                                            span.meta-positions__item.meta-positions__item--city New York
+                                            span.meta-positions__item.meta-positions__item--time Full Time
+                                        h3.item-positions__post Accountant
+                                    a.item-positions__link.btn.btn--outline-primary.btn--regular(href="#") Apply now
+                    .positions-content__column.positions-content__column--right
+                        .positions-content__tip.tip-positions
+                            h3.tip-positions__title Didn&rsquo;t find what you were looking for?
+                            p.tip-positions__text Send your CV&nbsp;or subscribe to&nbsp;our newsletter to&nbsp;receive information about new vacancies.
+                            .tip-positions__footer
+                                button.tip-positions__btn.tip-positions__btn--subs.btn.btn--outline-primary(data-modal-open="Modal-Subscribe" data-animation-window="fadeInUp") Subscribe 
+                                button.tip-positions__btn.tip-positions__btn--cv.btn.btn--fill-primary(data-modal-open="Modal-CV") Send CV
+        section.positions-benefits
+            .container
+                .positions-benefits__title.block-title.block-title--center
+                    h2.block-title__title Employee benefits
+                    p.block-title__description There&rsquo;s always room for talent.
+                ul.positions-benefits__list 
+                    li.positions-benefits__item.positions-benefits__item--training
+                        h3.positions-benefits__subtitle Training
+                        p.positions-benefits__description Culpa nostrud commodo ea&nbsp;consequat aliquip reprehenderit. Veniam velit nostrud aliquip sunt.
+                    li.positions-benefits__item.positions-benefits__item--growth
+                        h3.positions-benefits__subtitle Professional Growth
+                        p.positions-benefits__description Anim reprehenderit sint voluptate exercitation adipisicing laborum adipisicing. Minim empor est&nbsp;ea.
+                    li.positions-benefits__item.positions-benefits__item--salary
+                        h3.positions-benefits__subtitle Growing Salary
+                        p.positions-benefits__description Sit veniam aute dolore adipisicing nulla sit culpa. Minim mollit voluptate ullamco proident ea&nbsp;ad.
+        section.contacts-section
+            .contacts-section__container.container
+                h2.visually-hidden Contacts 
+                form.contacts-section__form.form-contacts(action="POST") 
+                    h2.form-contacts__title.form-title A&nbsp;quick way to&nbsp;discuss details
+                    label.form-contacts__field.form-field.form-field--contacts
+                        span.form-field__caption Name* 
+                        input.form-field__input(type="text" name="name" placeholder="Your name")
+                    label.form-contacts__field.form-field.form-field--contacts
+                        span.form-field__caption Phone* 
+                        input.form-field__input(type="tel" name="phone" placeholder="Your phone number")
+                    label.form-contacts__field.form-field.form-field--contacts
+                        span.form-field__caption Email 
+                        input.form-field__input(type="email" name="email" placeholder="Your working email")
+                    label.form-contacts__field.form-field.form-field--contacts
+                        span.form-field__caption Message* 
+                        textarea.form-field__input.form-field__input--big(name="message" placeholder="Your message")
+                    label.form-contacts__checkbox.form-checkbox 
+                        input.form-checkbox__input(type="checkbox")
+                        span.form-checkbox__text.
+                            I&nbsp;agree to&nbsp;receive communications from Createx Construction Bureau.
+                    button.form-contacts__btn.btn.btn--fill-primary.btn--regular(type="submit") Send request
+    .modal.fix-block
+        .modal__overlay
+            .modal__window.modal-item.modal-item--subscribe(data-modal-name='Modal-Subscribe')
+                .modal-item__header
+                    h3.modal-item__title Subscribe to&nbsp;our newsletter
+                    button.modal-item__close(data-modal-close)
+                .modal-item__body
+                    form.modal-item__form.form-modal(action="POST") 
+                        label.form-modal__field.form-field
+                            span.form-field__caption Name* 
+                            input.form-field__input(type="text" name="name" placeholder="Your name")
+                        label.form-modal__field.form-field
+                            span.form-field__caption Email* 
+                            input.form-field__input(type="email" name="email" placeholder="Your working email")
+                        button.form-modal__btn.btn.btn--fill-primary.btn--regular(type="submit") Send
+            .modal__window.modal-item.modal-item--cv(data-modal-name='Modal-CV')
+                .modal-item__header
+                    h3.modal-item__title Send your&nbsp;CV
+                    button.modal-item__close(data-modal-close)
+                .modal-item__body
+                    form.modal-item__form.form-modal(action="POST") 
+                        label.form-modal__field.form-field
+                            span.form-field__caption Name* 
+                            input.form-field__input(type="text" name="name" placeholder="Your name")
+                        label.form-modal__field.form-field
+                            span.form-field__caption Location*
+                            select.form-field__select(placeholder="Choose your location")
+                                option New-York 
+                                option Los-Angeles
+                        label.form-modal__field.form-field
+                            span.form-field__caption Phone*
+                            input.form-field__input(type="tel" name="tel" placeholder="Your working email")
+                        label.form-modal__field.form-field
+                            span.form-field__caption Email* 
+                            input.form-field__input(type="email" name="email" placeholder="Your working email")
+                        label.form-modal__field.form-field.form-field--contacts
+                            span.form-field__caption Сovering letter
+                            textarea.form-field__input.form-field__input--big(name="message" placeholder="Your covering letter")
+                        button.form-modal__btn.btn.btn--fill-primary.btn--regular(type="submit") Send

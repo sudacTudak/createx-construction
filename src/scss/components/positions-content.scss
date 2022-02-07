@@ -1,0 +1,123 @@
+@use '../utils/' as uts;
+
+.positions-content {
+    padding: 120px 0 100px;
+    &__info {
+        gap: var(--grid-gap);
+    }
+
+    &__column {
+        &--left {
+            grid-column: 7 span;
+        }
+
+        &--right {
+            @include uts.flex-hor-end();
+            grid-column: 5 span;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+.item-positions {
+    padding: 33px 38px 31px 40px;
+    background: var(--color-light);
+    @include uts.flex-ver-center();
+    border: 1px solid var(--color-gray-cod);
+    border-radius: var(--border-radius);
+
+    &__info {
+        flex: 1 1 auto;
+    }
+
+    &__meta {
+        margin-bottom: 7px;
+    }
+
+    &__post {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        color: var(--color-gray-dark);
+    }
+
+    &__link {
+        
+    }
+}
+
+.meta-positions {
+    &__item {
+        position: relative;
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--color-storm);
+        padding-left: 24px;
+
+        &:not(:last-child) {
+            margin-right: 25px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 1px;
+                right: -13px;
+                width: 1px;
+                height: 12px;
+                background-color: currentColor;
+            }
+        }
+
+        &--city {
+            background: url("@img/positions-content/outline.svg") left top -1px no-repeat;
+        }
+
+        &--time {
+            background: url("@img/positions-content/clock.svg") left top -1px no-repeat;
+        }
+    }
+}
+
+.tip-positions {
+    max-width: 390px;
+
+    &__title {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 150%;
+        color: var(--color-gray-dark);
+        margin-bottom: 23px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 150%;
+        color: var(--color-gray);
+        margin-bottom: 50px;
+    }
+
+    &__footer {
+        @include uts.flex-all-sb();
+    }
+
+    &__btn {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        &--subs {
+            padding-right: 44px;
+            padding-left: 44px;
+        }
+
+        &--cv {
+            padding-right: 52px;
+            padding-left: 53px;
+        }
+    }
+}
+
+

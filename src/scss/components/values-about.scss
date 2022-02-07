@@ -1,0 +1,63 @@
+@use '../utils/' as uts;
+
+.values-about {
+    padding: 80px 0 110px;
+    background-color: var(--color-athens);
+    --values-items-gap: 188px;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--values-items-gap);
+    }
+
+    &__item {
+        @include uts.flex-col-hor-center();
+        position: relative;
+        padding-top: 72px;
+        background-position: top center;
+        background-size: 48px 48px;
+        background-repeat: no-repeat;
+
+        &--quality {
+            background-image: url("@img/values/quality.svg");
+        }
+
+        &--safety {
+            background-image: url("@img/values/safety.svg");
+        }
+
+        &--comfort {
+            background-image: url("@img/values/comfort.svg");
+        }
+
+        &:not(:last-child) {
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: calc(var(--values-items-gap) / -2);
+                background-image: url("@img/values/vert-line.svg");
+                width: 1px;
+                height: 100%;
+                transform: translateX(50%);
+            }
+        }
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        color: var(--color-gray-dark);
+        margin-bottom: 8px;
+    }
+
+    &__description {
+        font-size: 16px;
+        line-height: 160%;
+        text-align: center;
+        color: var(--color-storm);
+    }
+
+}

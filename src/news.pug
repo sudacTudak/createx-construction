@@ -1,0 +1,151 @@
+extends ./pug/layout/main
+
+block append vars
+    - var siteTitle = 'Createx Construction';
+    - var pageClass = 'index-page';
+
+block content
+    main.page
+        section.page-hero.page-hero--news
+            .container 
+                ul.page-hero__breadcrumps.breadcrumps
+                    li.breadcrumps__item 
+                        a.breadcrumps__link(href="index.html") Homepage
+                    li.breadcrumps__item 
+                        a.breadcrumps__link News
+                .page-hero__content.block-main
+                    h1.block-main__title News
+                    p.block-main__description.
+                        Stay tuned with our news, expert tips and articles.
+        section.categories 
+            .container
+                .categories__title.block-title.block-title--center 
+                    h2.block-title__title Categories
+                ul.categories__nav.nav-categories
+                    li.nav-categories__item 
+                        button.nav-categories__btn.nav-categories__btn--active All News
+                    li.nav-categories__item 
+                        button.nav-categories__btn Company News
+                    li.nav-categories__item 
+                        button.nav-categories__btn Innovation
+                    li.nav-categories__item 
+                        button.nav-categories__btn Industry News
+                    li.nav-categories__item 
+                        button.nav-categories__btn Expert Tips
+                    li.nav-categories__item 
+                        button.nav-categories__btn Marketing
+                ul.categories__news.grid
+                    li.categories__item
+                        article.categories__article.article-news
+                            +img('categories/01.jpg', 'Artical 1 Image')(class="article-news__image")
+                            .article-news__text 
+                                h3.article-news__title
+                                    a.article-news__link(href="#").
+                                        How to&nbsp;Build Climate Change-Resilient Infrastructure 
+                                .article-news__meta.article-meta
+                                    span.article-meta__item Industry News
+                                    time.article-meta__item(datatime="2020-06-24 10:00") June 24, 2020
+                                    a.article-meta__item.article-meta__item--comments(href="") 4 comments
+                                p.article-news__description.
+                                    Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis...
+                    li.categories__item
+                        article.categories__article.article-news
+                            +img('categories/02.jpg', 'Artical 2 Image')(class="article-news__image")
+                            .article-news__text 
+                                h3.article-news__title
+                                    a.article-news__link(href="#").
+                                        How Construction Can Help Itself
+                                .article-news__meta.article-meta
+                                    span.article-meta__item Innovation
+                                    time.article-meta__item(datatime="2020-06-12 17:00") June 12, 2020
+                                    a.article-meta__item.article-meta__item--comments(href="") No comments
+                                p.article-news__description.
+                                    Porta habitant vitae quam interdum. Leo viverra non volutpat rhoncus placerat vitae scelerisque. Rhoncus augue faucibus maecenas lacus...
+                    li.categories__item
+                        article.categories__article.article-news
+                            +img('categories/03.jpg', 'Artical 3 Image')(class="article-news__image")
+                            .article-news__text 
+                                h3.article-news__title
+                                    a.article-news__link(href="#").
+                                        The Difference Between a&nbsp;Digger and an&nbsp;Excavator
+                                .article-news__meta.article-meta
+                                    span.article-meta__item Expert Tips
+                                    time.article-meta__item(datatime="2020-05-16 13:30") May 16, 2020
+                                    a.article-meta__item.article-meta__item--comments(href="#") No comments
+                                p.article-news__description.
+                                    Cras est nisi purus velit facilisi vitae, dolor. Lorem scelerisque integer duis et&nbsp;nulla lobortis cursus. Viverra erat sollicitudin praesent viverra...
+                    li.categories__item
+                        article.categories__article.article-news
+                            +img('categories/04.jpg', 'Artical 4 Image')(class="article-news__image")
+                            .article-news__text 
+                                h3.article-news__title
+                                    a.article-news__link(href="#").
+                                        Building Construction Hand Tools
+                                .article-news__meta.article-meta
+                                    span.article-meta__item Expert Tips
+                                    time.article-meta__item(datatime="2020-02-25 10:00") February 25, 2020
+                                    a.article-meta__item.article-meta__item--comments(href="#") 1 comment
+                                p.article-news__description.
+                                    Tellus quis aliquet volutpat nunc pulvinar donec sed sapien. Vitae elit id&nbsp;dolor, tristique massa. Fames lobortis orci rutrum bibendum integer...
+                    li.categories__item
+                        article.categories__article.article-news
+                            +img('categories/05.jpg', 'Artical 5 Image')(class="article-news__image")
+                            .article-news__text 
+                                h3.article-news__title
+                                    a.article-news__link(href="#").
+                                        Top&nbsp;10 Construction Trends 
+                                .article-news__meta.article-meta
+                                    span.article-meta__item Industry News
+                                    time.article-meta__item(datatime="2020-01-14 15:00") January 14, 2020
+                                    a.article-meta__item.article-meta__item--comments(href="") No comments
+                                p.article-news__description.
+                                    Dignissim sed enim, eleifend morbi condimentum. Congue id&nbsp;quis vulputate dignissim eget. Ac&nbsp;ullamcorper nunc habitasse enim interdum platea...
+                    li.categories__item
+                        article.categories__article.article-news
+                            +img('categories/06.jpg', 'Artical 6 Image')(class="article-news__image")
+                            .article-news__text 
+                                h3.article-news__title
+                                    a.article-news__link(href="#").
+                                        Types of&nbsp;Flooring Materials
+                                .article-news__meta.article-meta
+                                    span.article-meta__item Company News
+                                    time.article-meta__item(datatime="2019-12-01 12:00") December 1, 2019
+                                    a.article-meta__item.article-meta__item--comments(href="") No comments
+                                p.article-news__description.
+                                    Maecenas donec lacinia nunc, quam sit magnis mauris. Neque bibendum et&nbsp;mauris, aenean. Vel arcu amet in&nbsp;sem parturient integer duis et&nbsp;nulla...
+                ul.categories__pagination.pagination-categories
+                    li.pagination-categories__item
+                        button.pagination-categories__btn.pagination-categories__btn--active 1
+                    li.pagination-categories__item
+                        button.pagination-categories__btn 2
+                    li.pagination-categories__item
+                        button.pagination-categories__btn 3
+                    li.pagination-categories__item
+                        button.pagination-categories__btn 4
+                    li.pagination-categories__item
+                        button.pagination-categories__btn(aria-label="Next page")
+                            svg(width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg')
+                                path(fill-rule='evenodd' clip-rule='evenodd' d='M14.7929 6.79289C15.1834 6.40237 15.8166 6.40237 16.2071 6.79289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L16.2071 17.2071C15.8166 17.5976 15.1834 17.5976 14.7929 17.2071C14.4024 16.8166 14.4024 16.1834 14.7929 15.7929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L14.7929 8.20711C14.4024 7.81658 14.4024 7.18342 14.7929 6.79289Z')
+        section.contacts-section 
+            .contacts-section__container.container
+                h2.visually-hidden Contacts 
+                form.contacts-section__form.form-contacts(action="POST") 
+                    h2.form-contacts__title.form-title A&nbsp;quick way to&nbsp;discuss details
+                    label.form-contacts__field.form-field.form-field--contacts
+                        span.form-field__caption Name* 
+                        input.form-field__input(type="text" name="name" placeholder="Your name")
+                    label.form-contacts__field.form-field.form-field--contacts
+                        span.form-field__caption Phone* 
+                        input.form-field__input(type="tel" name="phone" placeholder="Your phone number")
+                    label.form-contacts__field.form-field.form-field--contacts
+                        span.form-field__caption Email 
+                        input.form-field__input(type="email" name="email" placeholder="Your working email")
+                    label.form-contacts__field.form-field.form-field--contacts
+                        span.form-field__caption Message* 
+                        textarea.form-field__input.form-field__input--big(name="message" placeholder="Your message")
+                    label.form-contacts__checkbox.form-checkbox 
+                        input.form-checkbox__input(type="checkbox")
+                        span.form-checkbox__text.
+                            I&nbsp;agree to&nbsp;receive communications from Createx Construction Bureau.
+                    button.form-contacts__btn.btn.btn--fill-primary.btn--regular(type="submit") Send request
+

@@ -1,0 +1,79 @@
+@use '../utils/' as uts;
+
+.positions-benefits {
+    padding: 80px 0 91px;
+    background-color: var(--color-light);
+    --values-items-gap: 188px;
+
+    &__title {
+        color: var(--color-light);
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--values-items-gap);
+        margin-bottom: 90px;
+    }
+
+    &__item {
+        @include uts.flex-col-hor-center();
+        position: relative;
+        padding-top: 72px;
+        background-position: top center;
+        background-size: 48px 48px;
+        background-repeat: no-repeat;
+
+        &--training {
+            background-image: url("@img/positions-benefits/01.svg");
+        }
+
+        &--growth {
+            background-image: url("@img/positions-benefits/02.svg");
+        }
+
+        &--salary {
+            background-image: url("@img/positions-benefits/03.svg");
+        }
+
+        &:not(:last-child) {
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: calc(var(--values-items-gap) / -2);
+                background-image: url("@img/positions-benefits/vert-line.png");
+                width: 1px;
+                height: 100%;
+                transform: translateX(50%);
+            }
+        }
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        color: var(--color-gray-dark);
+        margin-bottom: 8px;
+    }
+
+    &__description {
+        font-size: 16px;
+        line-height: 160%;
+        text-align: center;
+        color: var(--color-storm);
+        opacity: 0.6;
+    }
+    
+    &__bottom {
+        margin-bottom: -14px;
+    }
+
+    &__btn {
+        display: inline-block;
+        max-width: 390px;
+        width: 100%;
+        transform: translateY(12px);
+    }
+}

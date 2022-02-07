@@ -36,4 +36,25 @@
         background-repeat: no-repeat;
         padding: 152px 0 80px;
     }
+
+    &--about-us {
+        background-image: url("@img/hero-about-us/hero-about-us-bg_01.png"), url("@img/hero-about-us/hero-about-us-bg_02.png");
+        background-position: right -9px bottom 3px, right -8px bottom 3px;
+        background-repeat: no-repeat, no-repeat;
+        padding: 152px 0 180px;
+    }
+
+    &--positions {
+        padding: 152px 0 145px;
+        background-image: url("@img/hero-positions/hero-positions-bg.png");
+        background-position: right -9px bottom 1px;
+        background-repeat: no-repeat;
+    }
+
+    &--news {
+        padding: 152px 0 237px;
+        background-image: url("@img/hero-news/hero-news-bg.png");
+        background-position: right -9px bottom ;
+        background-repeat: no-repeat;
+    }
 }

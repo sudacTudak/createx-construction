@@ -1,0 +1,50 @@
+@use '../utils/' as uts;
+
+.article-news {
+    height: 100%;
+    background: var(--color-light);
+    @include uts.box-shadow();
+    border-radius: var(--border-radius);
+    overflow: hidden;
+
+    &__text {
+        padding: 24px;
+    }
+
+    &__title {
+        margin-bottom: 13px;
+    }
+
+    &__link {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        color: var(--color-gray-dark);
+        transition: color var(--transition-time) ease-in-out;
+
+        &:hover {
+                color: var(--color-primary);
+        }
+    }
+
+    &__description {
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-gray);
+    }
+
+    &--small {
+        .article-news__description {
+            display: none;
+        }
+
+        .article-news__text {
+            padding: 16px 24px 24px;
+        }
+
+        .article-news__title {
+            margin-bottom: 8px;
+        }
+    }
+}

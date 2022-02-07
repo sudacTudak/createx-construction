@@ -10,6 +10,9 @@
     border-radius: var(--border-radius);
     background-color: transparent;
     color: var(--color-light);
+    transition: 
+        color var(--transition-time) ease-in-out, 
+        background-color var(--transition-time) ease-in-out;
 
     &--outline {
 
@@ -20,6 +23,11 @@
         &-primary {
             border-color: var(--color-primary);
             color: var(--color-primary);
+
+            &:hover {
+                background-color: var(--color-primary);
+                color: var(--color-light);
+            }
         }
     }
 

@@ -1,0 +1,89 @@
+@use '../utils/' as uts;
+
+.categories {
+    padding: 120px 0 179px;
+    background-color: var(--color-light);
+
+    &__title {
+        margin-bottom: 42px;
+    }
+
+    &__nav {
+        margin-bottom: 59px;
+    }
+
+    &__news {
+        column-gap: var(--grid-gap);
+        row-gap: 57px;
+    }
+
+    &__item {
+        grid-column: 6 span;
+    }
+
+    &__pagination {
+        margin-top: 57px;
+    }
+}
+
+.nav-categories {
+    @include uts.flex-ver-center();
+
+    &__item {
+        flex: 0 0 calc(100% / 6);
+    }
+
+    &__btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: var(--border-radius);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-manatee);
+        padding: 9px 0;
+        transition: 
+            color var(--transition-time) ease-in-out, 
+            border-color var(--transition-time) ease-in-out;
+
+        &--active {
+            color: var(--color-primary);
+            border-color: currentColor;
+        }
+    }
+}
+
+.pagination-categories {
+    @include uts.flex-all-center();
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 21px;
+        }
+    }
+
+    &__btn {
+        background-color: transparent;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-gray);
+        transition: color var(--transition-time) ease-in-out;
+
+        svg {
+            fill: currentColor;
+            display: block;
+            width: 24px;
+            height: 24px;
+            object-fit: cover;
+        }
+
+        &--active {
+            color: var(--color-primary);
+        }
+    }
+}

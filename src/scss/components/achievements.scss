@@ -1,0 +1,157 @@
+@use '../utils/' as uts;
+
+.achievements {
+    background-color: var(--color-light);
+    background-image: url("@img/achievements/achievements-bg.png");
+    background-position: right -2px bottom -528px;
+    background-repeat: no-repeat;
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    &__list {
+        display: flex;
+        margin: 0 -43px;
+        margin-bottom: 238px;
+    }
+
+    &__item {
+        padding: 0 43px;
+        flex: 0 1 25%;
+        min-height: 178px;
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__image {
+
+    }
+
+    &__info {
+        position: relative;
+        z-index: 10;
+        left: -30px;
+        top: -40px;
+        background-color: var(--color-light);
+        @include uts.box-shadow();
+        border-radius: var(--border-radius);
+        flex-shrink: 0;
+        width: 735px;
+        padding: 0px 80px 60px 82px;
+    }
+}
+
+.item-achievements {
+
+    &__content {
+        padding-top: 66px;
+        @include uts.flex-col-all-center();
+    }
+
+    &--recommendations {
+        .item-achievements__content {
+            background: url("@img/achievements/icon_01.svg") top center / 48px 48px no-repeat;
+        }
+    }
+
+    &--appartments {
+        .item-achievements__content {
+            background: url("@img/achievements/icon_02.svg") top center / 48px 48px no-repeat;
+        }
+    }
+
+    &--specialists {
+        .item-achievements__content {
+            background: url("@img/achievements/icon_03.svg") top center / 48px 48px no-repeat;
+        }
+
+    }
+
+    &--square {
+        .item-achievements__content {
+            background: url("@img/achievements/icon_04.svg") top center / 48px 48px no-repeat;
+        }
+    }
+
+    &__value {
+        position: relative;
+        font-weight: 700;
+        font-size: 46px;
+        line-height: 130%;
+        color: var(--color-primary);
+        text-align: center;
+        margin-bottom: 10px;
+
+        sup {
+            font-size: 30px;
+            line-height: 1;
+            font-weight: 700;
+        }
+    }
+
+    &__description {
+        text-align: center;
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--color-gray-dark);
+        max-width: 240px;
+        padding: 0 10px;
+    }
+}
+
+.quote {
+    
+    &__content {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -5px;
+            width: 28px;
+            height: 20px;
+            background: url("@img/icons/braces.svg") center center / cover no-repeat;
+        }
+    }
+
+    &__text {
+        padding-left: 53px;
+        padding-right: 25px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        color: var(--color-gray-dark);
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__footer {
+        margin-top: 40px;
+        padding: 20px 20px 20px 53px;
+        background: url("@img/achievements/signature.svg") right 25px center / 100px 68px no-repeat;
+    }
+}
+
+.author-quote {
+    
+
+    &__name {
+        display: block;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-gray-dark);
+        margin-bottom: 5px;
+    }
+
+    &__post {
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--color-storm);
+    }
+}
