@@ -1,0 +1,58 @@
+@use '../utils' as uts;
+
+.comment {
+    display: flex;
+
+    &__info {
+        flex: 0 0 180px;
+        padding-right: 30px;
+    }
+
+    &__body {
+        flex: 0 0 630px;
+    }
+
+    &__author {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 150%;
+        color: var(--color-gray-dark);
+        display: block;
+        margin-bottom: 9px;
+    }
+
+    &__time {
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--color-storm);
+    }
+
+    &__content {
+        font-size: 16px;
+        line-height: 160%;
+        color: var(--color-gray);
+        margin-bottom: 17px;
+    }
+
+    &__reply {
+        display: inline-flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--color-storm);
+        background-color: transparent;
+
+        svg {
+            display: block;
+            width: 16px;
+            height: 16px;
+            object-fit: cover;
+            fill: currentColor;
+        }
+
+        span {
+            padding-top: 1px;
+            margin-left: 8px;
+        }
+    }
+}

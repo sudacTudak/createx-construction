@@ -4,6 +4,11 @@
 @use 'components/breadcrumps';
 @use 'components/article-news';
 @use 'components/article-meta';
+@use 'components/socials-news';
+@use 'components/comment';
 
 @use 'components/hero-page';
+@use 'components/post';
+@use 'components/post-comments';
+@use 'components/post-form';
 @use 'components/contacts-section';

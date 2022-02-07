@@ -1,0 +1,19 @@
+@use '../utils/' as uts;
+
+.socials-news {
+    @include uts.flex-ver-center();
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 12px;
+        }
+    }
+
+    &__link {
+        img {
+            width: 24px;
+            height: 24px;
+            object-fit: cover;
+        }
+    }
+}

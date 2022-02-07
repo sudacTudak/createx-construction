@@ -6,17 +6,133 @@ block append vars
 
 block content
     main.page
-        section.page-hero.page-hero--news
+        section.page-hero.page-hero--post
             .container 
                 ul.page-hero__breadcrumps.breadcrumps
                     li.breadcrumps__item 
                         a.breadcrumps__link(href="index.html") Homepage
                     li.breadcrumps__item 
-                        a.breadcrumps__link News
-                .page-hero__content.block-main
-                    h1.block-main__title News
-                    p.block-main__description.
-                        Stay tuned with our news, expert tips and articles.
+                        a.breadcrumps__link(href="news.html") News
+                    li.breadcrumps__item 
+                        a.breadcrumps__link How to&nbsp;Build Climate Change-Resilient Infrastructure
+                .page-hero__content.block-main.block-main--small
+                    h1.block-main__title How to&nbsp;Build Climate Change-Resilient Infrastructure
+                .block-main__bottom 
+                    .block-main__meta.article-meta.article-meta--single 
+                        span.article-meta__item.article-meta__item--category Industry News
+                        time.article-meta__item.article-meta__item--time(datatime="2020-06-24 10:00") June 24, 2020
+                        a.article-meta__item.article-meta__item--comments(href="") 4 comments
+                    ul.block-main__socials.socials-news 
+                        li.socials-news__item
+                            .socials-news__link 
+                                +img('icons/facebook-gray.svg', 'Facebook')(class="socials-news__icon")
+                        li.socials-news__item
+                            .socials-news__link 
+                                +img('icons/linked-in-gray.svg', 'Linked In')(class="socials-news__icon")
+                        li.socials-news__item
+                            .socials-news__link 
+                                +img('icons/twitter-gray.svg', 'Twitter')(class="socials-news__icon")
+        article.post 
+            .container
+                +img('post/content-image.jpg', 'Post 1 image')(class="post__cover")
+                .post__wrapper 
+                    .post__content
+                        .post__body 
+                            h2.
+                                Vulputate vitae pellentesque scelerisque luctus consequat mattis pellentesque dui odio. Interdum aenean sit malesuada ornare sed gravida rhoncus, congue. Purus auctor nullam diam quis est hendrerit ac&nbsp;euismod.
+                            p.
+                                At&nbsp;facilisi sapien posuere eget nunc senectus proin nullam. Tortor senectus in&nbsp;et&nbsp;sagittis, vitae diam cras dignissim. Varius adipiscing eget diam nisi. Orci, consectetur vulputate metus ornare pharetra, neque, fermentum. Vel nec rhoncus, non nunc, neque in&nbsp;massa. Feugiat leo nam nisl lacinia amet, odio. Mi&nbsp;varius viverra risus vel.
+                            p.
+                                Amet, morbi sed pharetra, elit eget mi&nbsp;potenti. Condimentum orci interdum feugiat lectus libero duis. Nisl massa, elementum varius sit. Nunc felis, porttitor aliquam urna, accumsan et&nbsp;sed. Aliquet non sed duis diam vehicula rhoncus. In&nbsp;dictum nullam tincidunt semper pellentesque purus morbi sed. Ut&nbsp;aliquet velit pharetra, nisi nunc, non.
+                            blockquote.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu&nbsp;sed purus facilisi. Vitae id&nbsp;turpis tempus ornare turpis quis non. Congue tortor in&nbsp;tot euismod vulputate etiam eros. Vel accumsan at&nbsp;elit neque, ipsum.
+                            p.
+                                Mauris amet arcu nisl vel dictum tellus. Sed rhoncus, ut&nbsp;sed id&nbsp;ut&nbsp;erat mattis. Vitae mus blandit in&nbsp;neque amet non fringilla blandit:
+                            ul 
+                                li A&nbsp;fermentum in&nbsp;morbi pretium aliquam adipiscing donec tempus.
+                                li Vulputate placerat amet pulvinar lorem nisl.
+                                li Consequat feugiat habitant gravida quisque elit bibendum id&nbsp;adipiscing sed.
+                                li Etiam duis lobortis in&nbsp;fames ultrices commodo nibh.
+                            p.
+                                Enim, vel massa odio diam. Blandit massa gravida feugiat elementum id&nbsp;nec sed leo. Nisi in&nbsp;ornare lectus eget. Urna, risus, consectetur volutpat lorem purus. Velit aliquet nibh vitae maecenas. Consectetur neque ut&nbsp;aliquam eros, purus enim dignissim aenean vitae. Ultrices fames augue mattis tortor est justo, pharetra nibh risus. Facilisi at&nbsp;porttitor volutpat natoque proin amet, nulla. Vivamus ut&nbsp;lobortis sagittis curabitur tellus convallis eget netus vitae.
+                        .post__share 
+                            span Share:
+                            ul.post__socials.socials-news 
+                                li.socials-news__item
+                                    .socials-news__link 
+                                        +img('icons/facebook-gray.svg', 'Facebook')(class="socials-news__icon")
+                                li.socials-news__item
+                                    .socials-news__link 
+                                        +img('icons/linked-in-gray.svg', 'Linked In')(class="socials-news__icon")
+                                li.socials-news__item
+                                    .socials-news__link 
+                                        +img('icons/twitter-gray.svg', 'Twitter')(class="socials-news__icon")
+                    .post__comments.post-comments
+                        .post-comments__title.block-title.block-title--center 
+                            h2.block-title__title 4 comments
+                        ul.post-comments__list
+                            li.post-comments__item
+                                .comment 
+                                    .comment__info 
+                                        span.comment__author Devon Lane
+                                        time.comment__time(datatime="2020-07-15 10:00") July 15, 2020
+                                    .comment__body 
+                                        p.comment__content.
+                                            Phasellus varius faucibus ultrices odio&nbsp;in. Massa neque dictum natoque ornare rutrum malesuada et&nbsp;phasellus. Viverra natoque nulla cras vel nisl proin senectus. Tortor sed eleifend ante tristique felis sed urna aliquet. Suspendisse fames egestas sed duis purus diam&nbsp;et.
+                                        button.comment__reply
+                                            svg(width='16' height='17' viewBox='0 0 16 17' xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M0.667318 7.82816L6.7625 1.16602V5.14077H8.05839C12.0766 5.14077 15.334 8.38764 15.334 12.393V14.4993L14.7584 13.8706C12.8014 11.7333 10.0324 10.5156 7.1293 10.5156H6.7625V14.4903L0.667318 7.82816Z')
+                                            span Reply
+                            li.post-comments__item
+                                .comment 
+                                    .comment__info 
+                                        span.comment__author Annette Black
+                                        time.comment__time(datatime="2020-08-01 11:00") 1 day ago
+                                    .comment__body 
+                                        p.comment__content.
+                                            #[a @Devon Lane] Egestas fermentum natoque sollicitudin mauris. Facilisis praesent urna sed rhoncus quis pharetra pellentesque erat sagittis.
+                                        button.comment__reply
+                                            svg(width='16' height='17' viewBox='0 0 16 17' xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M0.667318 7.82816L6.7625 1.16602V5.14077H8.05839C12.0766 5.14077 15.334 8.38764 15.334 12.393V14.4993L14.7584 13.8706C12.8014 11.7333 10.0324 10.5156 7.1293 10.5156H6.7625V14.4903L0.667318 7.82816Z')
+                                            span Reply
+                            li.post-comments__item
+                                .comment 
+                                    .comment__info 
+                                        span.comment__author Albert Flores
+                                        time.comment__time(datatime="2020-07-07 13:00") July 7, 2020
+                                    .comment__body 
+                                        p.comment__content.
+                                            Libero commodo sit dui ac&nbsp;proin. Penatibus ultricies at&nbsp;adipiscing mauris nunc. Fames faucibus nisl duis id&nbsp;diam.
+                                        button.comment__reply
+                                            svg(width='16' height='17' viewBox='0 0 16 17' xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M0.667318 7.82816L6.7625 1.16602V5.14077H8.05839C12.0766 5.14077 15.334 8.38764 15.334 12.393V14.4993L14.7584 13.8706C12.8014 11.7333 10.0324 10.5156 7.1293 10.5156H6.7625V14.4903L0.667318 7.82816Z')
+                                            span Reply
+                            li.post-comments__item
+                                .comment 
+                                    .comment__info 
+                                        span.comment__author Marvin McKinney
+                                        time.comment__time(datatime="2020-06-28 21:00") June 28, 2020
+                                    .comment__body 
+                                        p.comment__content.
+                                            Ullamcorper nibh sed ac&nbsp;ipsum nunc imperdiet rhoncus. Quam donec habitant nibh sit consequat erat libero, tincidunt. Eros ut&nbsp;aliquam proin et&nbsp;duis. Mauris, egestas congue nibh dui a&nbsp;nulla.
+                                        button.comment__reply
+                                            svg(width='16' height='17' viewBox='0 0 16 17' xmlns='http://www.w3.org/2000/svg')
+                                                path(d='M0.667318 7.82816L6.7625 1.16602V5.14077H8.05839C12.0766 5.14077 15.334 8.38764 15.334 12.393V14.4993L14.7584 13.8706C12.8014 11.7333 10.0324 10.5156 7.1293 10.5156H6.7625V14.4903L0.667318 7.82816Z')
+                                            span Reply
+                    form.post__form.post-form
+                        .post-form__title.block-title.block-title--center 
+                            h2.block-title__title Leave your comment
+                        .post-form__content 
+                            label.post-form__field.form-field.form-field
+                                span.form-field__caption Name* 
+                                input.form-field__input(type="text" name="name" placeholder="Your name")
+                            label.post-form__field.form-field.form-field
+                                span.form-field__caption Email* 
+                                input.form-field__input(type="text" name="email" placeholder="Your working email")
+                            label.post-form__field.form-field.form-field.post-form__field--big
+                                span.form-field__caption Your comment* 
+                                textarea.form-field__input(name="comment" placeholder="Type comment here")
+                            button.post-form__btn.btn.btn--fill-primary.btn--large Post Comment
         section.contacts-section 
             .contacts-section__container.container
                 h2.visually-hidden Contacts 

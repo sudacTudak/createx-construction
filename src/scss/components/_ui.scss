@@ -27,11 +27,17 @@
 
     &__buttons {
         margin-top: 61px;
+
         .btn {
             &:not(:last-child) {
                 margin-right: 22px;
             }
         }
+    }
+
+    &__bottom {
+        margin-top: 48px;
+        @include uts.flex-all-sb();
     }
 
     &--home {

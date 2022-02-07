@@ -32,4 +32,38 @@
             }
         }
     }
+
+    &--single {
+        .article-meta__item {
+            font-size: 16px;
+            line-height: 160%;
+
+            &:not(:last-child) {
+                margin-right: 26px;
+
+                &::after {
+                    height: 16px;
+                    color: inherit;
+                    background-color: var(--color-storm);
+                    top: 1px;
+                    right: -15px;
+                }
+            }
+
+            &--category {
+                color: var(--color-primary);
+                font-weight: 700;
+            }
+
+            &--time {
+                background: url("@img/icons/clock.svg") left center / 20px 20px no-repeat;
+                padding-left: 26px;
+            }
+
+            &--comments {
+                padding-left: 26px;
+                background: url("@img/icons/comments-big.svg") left center / 20px 20px no-repeat;
+            }
+        }
+    }
 }

@@ -57,4 +57,14 @@
         background-position: right -9px bottom ;
         background-repeat: no-repeat;
     }
+
+    &--post {
+        padding: 152px 0 160px;
+
+        .block-main {
+            &__title {
+                max-width: 100%;
+            }
+        }
+    }
 }
