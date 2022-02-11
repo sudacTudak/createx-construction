@@ -6,6 +6,7 @@
         line-height: 150%;
         color: var(--color-storm);
         position: relative;
+        transition: color var(--transition-time) ease-in-out;
 
         &:not(:last-child) {
             margin-right: 25px;
@@ -26,10 +27,6 @@
         &--comments {
             background: url("@img/icons/comments.svg") left no-repeat;
             padding-left: 23px;
-
-            &:hover {
-                text-decoration: underline;
-            }
         }
     }
 
@@ -64,6 +61,29 @@
                 padding-left: 26px;
                 background: url("@img/icons/comments-big.svg") left center / 20px 20px no-repeat;
             }
+        }
+    }
+}
+
+a.article-meta__item {
+    &.focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+    }
+
+    &:hover {
+        color: var(--color-primary);
+
+        &::after {
+            color: var(--color-storm);
+        }
+    }
+
+    &:active {
+        color: var(--color-active);
+
+        &::after {
+            color: var(--color-storm);
         }
     }
 }

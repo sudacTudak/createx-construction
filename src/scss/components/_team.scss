@@ -60,6 +60,20 @@
         a {
             color: var(--color-primary);
             text-decoration: underline;
+
+            &.focus-visible  {
+                outline: 2px solid var(--color-primary);
+                outline-offset: 2px;
+                border-radius: var(--border-radius);
+            }
+    
+            &:hover {
+                color: var(--color-primary);
+            }
+    
+            &:active {
+                color: var(--color-active);
+            }
         }
     }
 }
@@ -78,7 +92,11 @@
     }
 
     &__link {
-
+        &.focus-visible  {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;
+            border-radius: var(--border-radius);
+        }
     }
 
     &__icon {

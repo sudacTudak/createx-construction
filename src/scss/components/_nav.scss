@@ -15,9 +15,24 @@
         line-height: 160%;
         font-weight: 700;
         color: var(--color-gray);
+        transition: color var(--transition-time) ease-in-out;
 
         &--active {
             color: var(--color-primary);
+        }
+
+        &.focus-visible  {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;
+            border-radius: var(--border-radius);
+        }
+
+        &:hover {
+            color: var(--color-primary);
+        }
+
+        &:active {
+            color: var(--color-active);
         }
     }
 }

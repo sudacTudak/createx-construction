@@ -16,7 +16,13 @@
     }
 
     &__works {
-        margin-bottom: 80px;
+        .swiper-wrapper {
+            padding: 0 30px 80px;
+            margin: 0 -30px;
+        }
     }
 
+    &__explore {
+        
+    }
 }

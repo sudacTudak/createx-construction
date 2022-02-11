@@ -34,7 +34,7 @@
         font-size: 14px;
         font-weight: 700;
         color: var(--color-gray);
-        // margin-bottom: 2px;
+        transition: color var(--transition-time) ease-in-out;
     }
 
     &__value {
@@ -51,6 +51,23 @@
     &--mail {
         .contacts-link__icon {
             background-image: url("@img/icons/chat.svg");
+        }
+    }
+
+    &.focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+    }
+
+    &:hover {
+        .contacts-link__text {
+            color: var(--color-primary);
+        }
+    }
+
+    &:active {
+        .contacts-link__text {
+            color: var(--color-active);
         }
     }
 }

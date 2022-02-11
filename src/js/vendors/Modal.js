@@ -13,7 +13,6 @@ export default class Modal {
         };
         this.options = Object.assign(defaultOptions, options);
         this.modal = document.querySelector('.modal');
-        this.modalName = this.modal.dataset.modalName;
         this.isOpen = false;
         this.width = options.width ? options.width : '400px';
         this.closable = options.closable ? options.closable : true

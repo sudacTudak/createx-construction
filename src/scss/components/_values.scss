@@ -3,9 +3,10 @@
 .values {
     padding-top: 120px;
     background-color: var(--color-light);
-    --values-items-gap: 188px;
 
     &__list {
+        --values-items-gap: 188px;
+
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: var(--values-items-gap);
@@ -38,7 +39,7 @@
                 position: absolute;
                 top: 0;
                 right: calc(var(--values-items-gap) / -2);
-                background-image: url("@img/values/vert-line.svg");
+                background-image: url("@img/icons/vert-line.svg");
                 width: 1px;
                 height: 100%;
                 transform: translateX(50%);

@@ -46,6 +46,12 @@
             text-align: left;
             position: relative;
             padding-left: 45px;
+
+            &.focus-visible  {
+                outline: 2px solid var(--color-primary);
+                outline-offset: 2px;
+                border-radius: var(--border-radius);
+            }
         }
 
         .accordion__title {

@@ -82,6 +82,11 @@
         transition: color var(--transition-time) ease-in;
     }
 
+    &.focus-visible  {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+    }
+
     &:hover {
         &::before {
             opacity: 1;
@@ -95,8 +100,26 @@
             fill: var(--color-light);
         }
 
-        .item-service__subtitle {
+        .item-service__title {
             color: var(--color-light);
+        }
+    }
+
+    &:active {
+        &::before {
+            opacity: 1;
+        }
+
+        &::after {
+            opacity: 1;
+        }
+
+        .item-service__icon {
+            fill: var(--color-active);
+        }
+
+        .item-service__title {
+            color: var(--color-active);
         }
     }
 }

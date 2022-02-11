@@ -1,0 +1,55 @@
+@use '../utils/' as uts;
+
+.go-top {
+    @include uts.flex-ver-end();
+    position: fixed;
+    right: calc((100% - 1230px) / 2);
+    bottom: 80px;
+    z-index: 1000;
+    background-color: transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-time) ease-in-out, visibility var(--transition-time) ease-in-out;
+
+    &__text {
+        margin-right: 16px;
+        font-size: 14px;
+        line-height: 150%;
+        color: var(--color-primary);
+        text-transform: uppercase;
+        text-shadow: 3px 3px 19px rgba(150, 150, 150, 1);
+        transition: color var(--transition-time) ease-in-out;
+    }
+
+    &__icon {
+        @include uts.flex-all-center();
+        width: 40px;
+        height: 40px;
+        background-color: var(--color-primary);
+        border-radius: var(--border-radius);
+        transition: background-color var(--transition-time) ease-in-out;
+
+        svg {
+            display: block;
+            width: 24px;
+            height: 24px;
+            object-fit: cover;
+            fill: var(--color-light);
+        }
+    }
+
+    &:hover {
+        .go-top__icon {
+            background-color: var(--color-active);
+        }
+
+        .go-top__text {
+            color: var(--color-active);
+        }
+    }
+
+    &--is-active {
+        opacity: 1;
+        visibility: visible;
+    }
+}

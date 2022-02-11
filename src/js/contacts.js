@@ -1,20 +1,13 @@
-import Modal from './vendors/Modal';
-import '../scss/vendors/Modal.scss';
 import Choices from 'choices.js';
-import 'choices.js/src/styles/choices.scss';
-import '../scss/positions.scss';
 import 'focus-visible';
 import './go-top';
+import 'choices.js/src/styles/choices.scss';
+import '../scss/contacts.scss';
 import {transitionTime} from './cssProperties';
 
-const selectsModal = document.querySelectorAll('.modal .form-field__select');
+const selectsContactUs = document.querySelectorAll('.form-field__select');
 
-const modalSubscribe = new Modal({
-    closable: true,
-    width: '486px',
-})
-
-selectsModal.forEach( sel => {
+selectsContactUs.forEach( sel => {
     const choicesSelect = new Choices(sel, {
         searchEnabled: false,
         shouldSort: false,
@@ -23,4 +16,4 @@ selectsModal.forEach( sel => {
         position: 'bottom',
         itemSelectText: '',
     })
-})
+});

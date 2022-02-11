@@ -9,14 +9,6 @@
         margin-bottom: 60px;
     }
 
-    &__tabs {
-
-    }
-
-    &__tabs-items {
-        
-    }
-
     &__load-more {
         margin-top: 62px;
     }
@@ -48,6 +40,29 @@
         transition: 
             color var(--transition-time) ease-in-out, 
             background-color var(--transition-time) ease-in-out;
+
+        &.focus-visible  {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;
+        }
+
+        &:hover {
+            .tabs-nav-portfolio__text {
+                color: var(--color-gray-dark);
+            }
+        }
+
+        &:active {
+            background-color: var(--color-active);
+
+            .tabs-nav-portfolio__text {
+                color: var(--color-light);
+            }
+
+            .tabs-nav-portfolio__icon {
+                fill: var(--color-light);
+            }
+        }
     }
 
     &__icon {
@@ -111,24 +126,48 @@
         background-color: transparent;
         display: inline-flex;
         align-items: center;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 160%;
         color: var(--color-gray);
 
-        img {
+        span {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 160%;
+            color: inherit;
+        }
+
+        svg {
             display: block;
             width: 24px;
             height: 24px;
             object-fit: cover;
             margin-right: 16px;
             transition: transform var(--transition-time) ease-in-out;
+            color: inherit;
+            fill: currentColor;
         }
 
         &--active {
-            img {
+            svg {
                 transform: rotate(360deg);
             }
+        }
+
+        &.focus-visible  {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;
+            border-radius: var(--border-radius);
+        }
+
+        &:hover {
+            color: var(--color-primary);
+        }
+
+        &:active {
+            color: var(--color-active);
+        }
+
+        &:disabled {
+            opacity: 0.5;
         }
     }
 }

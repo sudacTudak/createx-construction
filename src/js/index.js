@@ -1,24 +1,62 @@
-import '../scss/index.scss'
-import Swiper, {Navigation} from 'swiper';
+import '../scss/index.scss';
+import './go-top';
+import 'focus-visible';
+import Swiper, {Autoplay, Navigation, Pagination} from 'swiper';
 import 'swiper/css';
 import './progress';
-import { gridGap, transitionTime } from './cssProperties';
+import './video';
+import { gridGap, transitionTime, mainSliderSpeed, mainSliderAutoplayDelay } from './cssProperties';
 
 if (module.hot) {
 	module.hot.accept()
 }
 
 
+const sliderHeroMain = new Swiper('.hero-slider ', {
+    modules: [Navigation, Pagination, Autoplay],
+    speed: mainSliderSpeed,
+    loop: false,
+    slidesPerView: 1,
+    autoplay: {
+        delay: mainSliderAutoplayDelay,
+        disableOnInteraction: true,
+    },
+    navigation: {
+        nextEl: '.hero-slider__next',
+        prevEl: '.hero-slider__prev',
+    },
 
-const sliderPortfolio = new Swiper('.portfolio__works', {
+    pagination: {
+        el: '.hero-slider__pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+    on: {
+        'init': () => {
+            const paginationItems = document.
+                querySelectorAll('.hero-slider__pagination .swiper-pagination-bullet');
+            let counter = 0;
+
+            paginationItems.forEach(el => {
+                counter++;
+
+                el.textContent = counter < 10 ? `0${counter}` : `${counter}`;
+                el.innerHTML += '<span class="hero-slider__bar"></span>'
+            })
+        }
+    },
+});
+
+
+const sliderPortfolio = new Swiper('.portfolio-section__works', {
     modules: [Navigation],
     speed: transitionTime,
     loop: true,
     slidesPerView: 3,
     spaceBetween: gridGap,
     navigation: {
-        nextEl: '.portfolio__next',
-        prevEl: '.portfolio__prev',
+        nextEl: '.portfolio-section__next',
+        prevEl: '.portfolio-section__prev',
     },
 });
 

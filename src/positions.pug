@@ -115,35 +115,41 @@ block content
                     h3.modal-item__title Subscribe to&nbsp;our newsletter
                     button.modal-item__close(data-modal-close)
                 .modal-item__body
-                    form.modal-item__form.form-modal(action="POST") 
-                        label.form-modal__field.form-field
-                            span.form-field__caption Name* 
-                            input.form-field__input(type="text" name="name" placeholder="Your name")
-                        label.form-modal__field.form-field
-                            span.form-field__caption Email* 
-                            input.form-field__input(type="email" name="email" placeholder="Your working email")
+                    form.modal-item__form.form-modal.form-modal--subscribe(action="POST")
+                        .form-modal__fields  
+                            label.form-modal__field.form-field
+                                span.form-field__caption Name* 
+                                input.form-field__input(type="text" name="name" placeholder="Your name")
+                            label.form-modal__field.form-field
+                                span.form-field__caption Email* 
+                                input.form-field__input(type="email" name="email" placeholder="Your working email")
                         button.form-modal__btn.btn.btn--fill-primary.btn--regular(type="submit") Send
             .modal__window.modal-item.modal-item--cv(data-modal-name='Modal-CV')
                 .modal-item__header
                     h3.modal-item__title Send your&nbsp;CV
                     button.modal-item__close(data-modal-close)
                 .modal-item__body
-                    form.modal-item__form.form-modal(action="POST") 
-                        label.form-modal__field.form-field
-                            span.form-field__caption Name* 
-                            input.form-field__input(type="text" name="name" placeholder="Your name")
-                        label.form-modal__field.form-field
-                            span.form-field__caption Location*
-                            select.form-field__select(placeholder="Choose your location")
-                                option New-York 
-                                option Los-Angeles
-                        label.form-modal__field.form-field
-                            span.form-field__caption Phone*
-                            input.form-field__input(type="tel" name="tel" placeholder="Your working email")
-                        label.form-modal__field.form-field
-                            span.form-field__caption Email* 
-                            input.form-field__input(type="email" name="email" placeholder="Your working email")
-                        label.form-modal__field.form-field.form-field--contacts
-                            span.form-field__caption Сovering letter
-                            textarea.form-field__input.form-field__input--big(name="message" placeholder="Your covering letter")
+                    form.modal-item__form.form-modal.form-modal--cv(action="#" method="POST" enctype="multipart/form-data") 
+                        .form-modal__fields 
+                            label.form-modal__field.form-field
+                                span.form-field__caption Name* 
+                                input.form-field__input(type="text" name="name" placeholder="Your name")
+                            label.form-modal__field.form-field
+                                span.form-field__caption Location*
+                                select.form-field__select(name="Location")
+                                    option(value="") Choose your location
+                                    option(value="New-York") New-York
+                                    option(value="Los-Angeles") Los-Angeles
+                            label.form-modal__field.form-field
+                                span.form-field__caption Phone*
+                                input.form-field__input(type="tel" name="tel" placeholder="Your working email")
+                            label.form-modal__field.form-field
+                                span.form-field__caption Email* 
+                                input.form-field__input(type="email" name="email" placeholder="Your working email")
+                            label.form-modal__field.form-field
+                                span.form-field__caption Сovering letter
+                                textarea.form-field__input.form-field__input--big(name="message" placeholder="Your covering letter")
+                        label.form-modal__file.form-file
+                            span.form-file__text Attach your CV*
+                            input.form-file__input(type="file")
                         button.form-modal__btn.btn.btn--fill-primary.btn--regular(type="submit") Send

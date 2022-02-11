@@ -115,20 +115,24 @@
         right: 0;
         background-color: rgba(#1e212c, 0.6);
         border-radius: var(--border-radius);
+        transition: opacity var(--transition-time) ease-in-out, visibility var(--transition-time) ease-in-out;
     }
 
     &__play {
         position: absolute;
         width: 80px;
         height: 80px;
+        color: var(--color-light);
         background-color: var(--color-primary);
         border-radius: 100%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 10;
+        transition: opacity var(--transition-time) ease-in-out, visibility var(--transition-time) ease-in-out;
 
         svg {
+            fill: currentColor;
             position: absolute;
             width: 26px;
             height: 26px;
@@ -136,25 +140,22 @@
             left: 50%;
             transform: translate(-40%, -50%);
         }
-    }
 
-    &__mute {
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        background-color: rgba(#fff, 0.12);
-        border-radius: 100%;
-        bottom: 32px;
-        left: 32px;
-        z-index: 10;
+        &.focus-visible  {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;
+        }
 
-        svg {
-            width: 20px;
-            height: 20px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        &:hover {
+            background-color: var(--color-active);
+        }
+
+        &:active {
+            background-color: var(--color-active);
+        }
+
+        &:disabled {
+            opacity: 0.5;
         }
     }
 
@@ -164,6 +165,18 @@
         height: 100%;
         object-fit: cover;
         border-radius: var(--border-radius);
+    }
+
+    &--played {
+        &::before {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .block-video__play {
+            opacity: 0;
+            visibility: hidden;
+        }
     }
 }
 
@@ -191,9 +204,19 @@
             fill: currentColor;
         }
 
+        &.focus-visible  {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;
+        }
+
         &:hover {
             color: var(--color-light);
             background-color: var(--color-primary);
+        }
+
+        &:active {
+            color: var(--color-light);
+            background-color: var(--color-active);
         }
     }
 }

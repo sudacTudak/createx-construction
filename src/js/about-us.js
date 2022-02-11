@@ -1,4 +1,6 @@
 import '../scss/about-us.scss';
+import './go-top';
+import 'focus-visible';
 import Swiper, {Navigation, Thumbs, Scrollbar} from 'swiper';
 import 'swiper/css';
 import {gridGap, transitionTime} from './cssProperties';

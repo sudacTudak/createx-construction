@@ -54,7 +54,7 @@
     &--news {
         padding: 152px 0 237px;
         background-image: url("@img/hero-news/hero-news-bg.png");
-        background-position: right -9px bottom ;
+        background-position: right -9px bottom;
         background-repeat: no-repeat;
     }
 
@@ -66,5 +66,12 @@
                 max-width: 100%;
             }
         }
+    }
+
+    &--contacts {
+        padding: 152px 0 207px;
+        background-image: url("@img/hero-contacts/hero-contacts-bg.png");
+        background-position: right -9px bottom;
+        background-repeat: no-repeat;
     }
 }

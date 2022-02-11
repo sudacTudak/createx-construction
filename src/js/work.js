@@ -1,5 +1,7 @@
-import '../scss/work.scss';
 import Tabs from './vendors/Tabs';
+import '../scss/work.scss';
+import './go-top';
+import 'focus-visible';
 
 const loadMoreBtn = document.querySelector('.load-more-portfolio__btn');
 const activeTabsItems = document.querySelectorAll('.tabs__item--active');

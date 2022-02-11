@@ -32,6 +32,28 @@
         line-height: 160%;
         color: var(--color-gray);
         margin-bottom: 17px;
+
+        a {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 160%;
+            color: var(--color-primary);
+            transition: color var(--transition-time) ease-in-out;
+
+            &.focus-visible{
+                outline: 3px solid var(--color-primary);
+                outline-offset: 2px;
+                border-radius: var(--border-radius);
+            }
+        
+            &:hover {
+                color: var(--color-active);
+            }
+        
+            &:active {
+                color: var(--color-active);
+            }
+        }
     }
 
     &__reply {
@@ -41,6 +63,7 @@
         line-height: 150%;
         color: var(--color-storm);
         background-color: transparent;
+        transition: color var(--transition-time) ease-in-out;
 
         svg {
             display: block;
@@ -53,6 +76,20 @@
         span {
             padding-top: 1px;
             margin-left: 8px;
+        }
+
+        &.focus-visible{
+            outline: 3px solid var(--color-primary);
+            outline-offset: 2px;
+            border-radius: var(--border-radius);
+        }
+    
+        &:hover {
+            color: var(--color-active);
+        }
+    
+        &:active {
+            color: var(--color-active);
         }
     }
 }

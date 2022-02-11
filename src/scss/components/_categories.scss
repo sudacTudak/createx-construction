@@ -48,11 +48,27 @@
         padding: 9px 0;
         transition: 
             color var(--transition-time) ease-in-out, 
-            border-color var(--transition-time) ease-in-out;
+            border-color var(--transition-time) ease-in-out,
+            background-color var(--transition-time) ease-in-out;
 
         &--active {
             color: var(--color-primary);
             border-color: currentColor;
+        }
+
+        &.focus-visible  {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;
+            border-radius: var(--border-radius);
+        }
+
+        &:hover {
+            color: var(--color-gray-dark);
+        }
+
+        &:active {
+            background-color: var(--color-active);
+            color: var(--color-light);
         }
     }
 }
@@ -84,6 +100,20 @@
 
         &--active {
             color: var(--color-primary);
+        }
+
+        &.focus-visible  {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;
+            border-radius: var(--border-radius);
+        }
+
+        &:hover {
+            color: var(--color-primary);
+        }
+
+        &:active {
+            color: var(--color-active);
         }
     }
 }

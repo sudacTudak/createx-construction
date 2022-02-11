@@ -43,6 +43,11 @@
         margin-top: 25px;
     }
 
+    &.focus-visible  {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+    }
+
     &:hover {
         .item-portfolio__content {
             transform: translateY(-69px);

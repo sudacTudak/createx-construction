@@ -1,7 +1,9 @@
-import '../scss/service.scss';
 import Accordion from './vendors/Accordion';
 import Swiper, {Navigation} from 'swiper';
 import 'swiper/css';
+import '../scss/service.scss';
+import './go-top';
+import 'focus-visible';
 import { gridGap, transitionTime } from './cssProperties';
 
 const startCounter = () => {

@@ -13,4 +13,11 @@
         padding: 120px 0 100px;
         background-color: var(--color-light);
     }
+
+    &__link {
+        &.focus-visible  {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;
+        }
+    }
 }
