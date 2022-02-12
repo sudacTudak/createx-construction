@@ -108,17 +108,6 @@
     &__item {
         grid-column: 4 span;
     }
-
-    .tabs__item {
-        
-        &--hidden-more {
-            display: none;
-        }
-    
-        &--visible-more {
-            display: block !important;
-        }
-    }
 }
 
 .load-more-portfolio {
@@ -148,8 +137,10 @@
 
         &--active {
             svg {
-                transform: rotate(360deg);
+                animation: loadingBtn 1s linear infinite;
             }
+
+            animation: loadingColor 4s linear infinite;
         }
 
         &.focus-visible  {
@@ -169,6 +160,25 @@
         &:disabled {
             opacity: 0.5;
         }
+    }
+}
+
+@keyframes loadingBtn {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loadingColor {
+    0% {
+        color: var(--color-active);
+    }
+
+    100% {
+        color: var(--color-gray);
     }
 }
 

@@ -5,12 +5,27 @@ import 'focus-visible';
 // import '../img/empty-photo.png';
 
 const loadMoreBtn = document.querySelector('.load-more-portfolio__btn');
-const activeTabsItems = document.querySelectorAll('.tabs__item--active');
-const activeTabsItemsCount = activeTabsItems.length;
-const maxWorksLength = 9;
-const alreadyLoaded = [];
+let isLoadMore = true;
 
 const portfolioRequest = new Request('https://createxconstructionworks-default-rtdb.firebaseio.com/works.json');
+
+const activeBtn = (btn) => {
+    loadMoreBtn.classList.add('load-more-portfolio__btn--active');
+}
+
+const disableBtn = () => {
+    loadMoreBtn.classList.remove('load-more-portfolio__btn--active');
+}
+
+const hideLoadMoreBtn = () => {
+    loadMoreBtn.style.display = "none";
+    isLoadMore = false;
+}
+
+const showLoadMoreBtn = () => {
+    loadMoreBtn.style.display = "inline-flex";
+    isLoadMore = true;
+}
 
 const hideLoaded = () => {
     const loadedWorks = document.querySelectorAll('.tabs-portfolio__item.--loaded');
@@ -21,18 +36,8 @@ const hideLoaded = () => {
     })
 }
 
-const isAlreadyLoaded = (category) => {
-    if (alreadyLoaded.includes(category)) {
-        loadMoreBtn.style.display = "none";
-    }
-
-    alreadyLoaded.includes(category) ?
-        loadMoreBtn.style.display = "none" : loadMoreBtn.style.display = "inline-flex";
-}
-
 const renderWorks = (portfolioWorks, currentCategory) => {
     const worksList = document.querySelector('.tabs-portfolio');
-    alreadyLoaded.push(`${currentCategory}`);
     console.log(portfolioWorks);
 
     portfolioWorks.forEach(work => {
@@ -69,6 +74,8 @@ const loadWorks = (currentCategory) => {
         })
         .then(data => {
             renderWorks(data, currentCategory);
+            disableBtn();
+            hideLoadMoreBtn();
         })
         .catch(error => {
             alert(error);
@@ -78,12 +85,16 @@ const loadWorks = (currentCategory) => {
 const tabsPortfolio = new Tabs('portfolioTabs', {
     isChanged: (tabs) => {
         hideLoaded();
+        if (!isLoadMore) {
+            showLoadMoreBtn();
+        }
     }
 });
 
 loadMoreBtn.addEventListener('click', () => {
     const currentCategory = document.querySelector('.nav-tabs__btn--active').dataset.tabsCategory;
-    console.log(currentCategory);
+
+    activeBtn();
     loadWorks(currentCategory);
 })
 
