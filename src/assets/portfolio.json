@@ -1,0 +1,58 @@
+{
+    "works": [
+        {
+            "name": "Red Square",
+            "description": "Stores & Malls",
+            "img": "./assets/empty-photo.png",
+            "category": "construction"
+        },
+        {
+            "name": "Best Cottage",
+            "description": "Private Houses",
+            "img": "./assets/empty-photo.png",
+            "category": "construction"
+        },
+        {
+            "name": "Modern Kitchen",
+            "description": "Apartments & flats",
+            "img": "./assets/empty-photo.png",
+            "category": "interiorDesign"
+        },
+        {
+            "name": "Green Garden",
+            "description": "Public places",
+            "img": "./assets/empty-photo.png",
+            "category": "projectDev"
+        },
+        {
+            "name": "Red Whale",
+            "description": "Stores & Malls",
+            "img": "./assets/empty-photo.png",
+            "category": "construction"
+        },
+        {
+            "name": "Museum of Glory",
+            "description": "Reconstruction",
+            "img": "./assets/empty-photo.png",
+            "category": "repairs"
+        },
+        {
+            "name": "Museum of Victory",
+            "description": "Reconstruction",
+            "img": "./assets/empty-photo.png",
+            "category": "repairs"
+        },
+        {
+            "name": "Summer Terrace",
+            "description": "Apartments & flats",
+            "img": "./assets/empty-photo.png",
+            "category": "interiorDesign"
+        },
+        {
+            "name": "Gorky Park",
+            "description": "Public places",
+            "img": "./assets/empty-photo.png",
+            "category": "projectDev"
+        }
+    ]
+}

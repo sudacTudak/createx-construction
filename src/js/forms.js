@@ -19,7 +19,9 @@ const initForm = (selector, rules, sendModal) => {
     })
 
     form.elements.forEach(el => {
-        if (el.type === "text" && el.name === "name") {
+        if (!el.hasAttribute('data-req')) {return};
+
+        if (el.name === "name") {
             validate.addField('[name="name"]', [
                 {
                     rule: 'minLength',
