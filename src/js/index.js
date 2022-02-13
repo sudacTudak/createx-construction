@@ -3,9 +3,10 @@ import './go-top';
 import 'focus-visible';
 import Swiper, {Autoplay, Navigation, Pagination} from 'swiper';
 import 'swiper/css';
+import { gridGap, transitionTime, mainSliderSpeed, mainSliderAutoplayDelay } from './cssProperties';
+import './adaptive-header';
 import './progress';
 import './video';
-import { gridGap, transitionTime, mainSliderSpeed, mainSliderAutoplayDelay } from './cssProperties';
 import './forms';
 
 if (module.hot) {

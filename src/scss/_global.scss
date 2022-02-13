@@ -40,6 +40,15 @@
 
 
 //<ВСПОМОГАТЕЛЬНЫЕ СВОЙСТВА>
+.disable-scroll{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;

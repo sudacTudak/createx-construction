@@ -9,7 +9,18 @@
 
         &:not(:last-child) {
             margin-right: 36px;
+
+            @include uts.tablet() {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
         }
+    }
+
+    @include uts.tablet() {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -28,6 +39,10 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
+
+        @include uts.minidesk() {
+            padding-left: 6px;
+        }
     }
 
     &__text {
@@ -35,11 +50,23 @@
         font-weight: 700;
         color: var(--color-gray);
         transition: color var(--transition-time) ease-in-out;
+
+        @include uts.tablet() {
+            color: var(--color-light);
+        }
     }
 
     &__value {
         font-size: 18px;
         color: var(--color-gray-dark);
+
+        @include uts.minidesk() {
+            font-size: 16px;
+        }
+
+        @include uts.tablet() {
+            color: var(--color-light);
+        }
     }
 
     &--phone {
