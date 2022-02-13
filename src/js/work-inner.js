@@ -4,6 +4,7 @@ import '../scss/work-inner.scss';
 import { gridGap, transitionTime } from './cssProperties';
 import './go-top';
 import 'focus-visible';
+import './forms';
 
 const workImages = document.querySelector('.work-images__slider');
 const workImagesSmall = document.querySelector('.work-images__slider-small');

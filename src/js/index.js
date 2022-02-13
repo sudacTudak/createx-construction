@@ -6,6 +6,7 @@ import 'swiper/css';
 import './progress';
 import './video';
 import { gridGap, transitionTime, mainSliderSpeed, mainSliderAutoplayDelay } from './cssProperties';
+import './forms';
 
 if (module.hot) {
 	module.hot.accept()

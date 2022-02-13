@@ -28,7 +28,7 @@ block content
                         form.contacts-us__form.form-contact-us
                             label.form-contact-us__field.form-field
                                 span.form-field__caption Name* 
-                                input.form-field__input(type="text" name="name" placeholder="Your name")
+                                input.form-field__input(type="text" name="name" placeholder="Your name" data-req)
                             label.form-contact-us__field.form-field
                                 span.form-field__caption I am interested in 
                                 select.form-field__select(name="interested")
@@ -36,12 +36,14 @@ block content
                                     option(value="ImAGamer") I`m a gamer
                             label.form-contact-us__field.form-field
                                 span.form-field__caption Phone* 
-                                input.form-field__input(type="tel" name="tel" placeholder="Your phone number")
+                                input.form-field__input(type="tel" name="tel" placeholder="Your phone number" data-req)
                             label.form-contact-us__field.form-field
                                 span.form-field__caption Location* 
-                                select.form-field__select(name="location")
+                                select.form-field__select(name="location" data-req)
+                                    option(value="") Choose your location
                                     option(value="NewYork") New York
                                     option(value="Los-Angeles") Los-Angeles
+                                .error-message
                             label.form-contact-us__field.form-field
                                 span.form-field__caption Email 
                                 input.form-field__input(type="email" name="email" placeholder="Your working email")
@@ -58,7 +60,7 @@ block content
                                     span.form-radio__text Viber
                             label.form-contact-us__field.form-field.form-contact-us__field--big
                                 span.form-field__caption Message* 
-                                textarea.form-field__input(name="message" placeholder="Your message")
+                                textarea.form-field__input(name="message" placeholder="Your message" data-req)
                             .form-contact-us__bottom 
                                 label.form-contact-us__checkbox.form-checkbox 
                                     input.form-checkbox__input(type="checkbox" name="ReceiveCommunications")

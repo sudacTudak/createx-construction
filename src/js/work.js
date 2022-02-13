@@ -2,14 +2,15 @@ import Tabs from './vendors/Tabs';
 import '../scss/work.scss';
 import './go-top';
 import 'focus-visible';
-// import '../img/empty-photo.png';
+import './forms';
 
 const loadMoreBtn = document.querySelector('.load-more-portfolio__btn');
+const portfolioList = document.querySelector('.portfolio__tabs-list');
 let isLoadMore = true;
 
 const portfolioRequest = new Request('https://createxconstructionworks-default-rtdb.firebaseio.com/works.json');
 
-const activeBtn = (btn) => {
+const activeBtn = () => {
     loadMoreBtn.classList.add('load-more-portfolio__btn--active');
 }
 
@@ -38,13 +39,12 @@ const hideLoaded = () => {
 
 const renderWorks = (portfolioWorks, currentCategory) => {
     const worksList = document.querySelector('.tabs-portfolio');
-    console.log(portfolioWorks);
 
     portfolioWorks.forEach(work => {
         const {name, description, img, category} = work;
 
         if (currentCategory !== 'all' && currentCategory !== category) {return}
-        console.log(category);
+
         const workElem = document.createElement('li');
         workElem.classList.add('tabs-portfolio__item');
         workElem.classList.add('tabs__item');
@@ -69,8 +69,9 @@ const renderWorks = (portfolioWorks, currentCategory) => {
 const loadWorks = (currentCategory) => {
     return fetch(portfolioRequest)
         .then(response => {
-            console.log(response);
-            if (response.ok) return response.json();
+            if (response.ok) {
+                return response.json();
+            }
         })
         .then(data => {
             renderWorks(data, currentCategory);
@@ -82,14 +83,16 @@ const loadWorks = (currentCategory) => {
         })
 }
 
-const tabsPortfolio = new Tabs('portfolioTabs', {
-    isChanged: (tabs) => {
-        hideLoaded();
-        if (!isLoadMore) {
-            showLoadMoreBtn();
+if (portfolioList) {
+    const tabsPortfolio = new Tabs('portfolioTabs', {
+        isChanged: (tabs) => {
+            hideLoaded();
+            if (!isLoadMore) {
+                showLoadMoreBtn();
+            }
         }
-    }
-});
+    });
+}
 
 loadMoreBtn.addEventListener('click', () => {
     const currentCategory = document.querySelector('.nav-tabs__btn--active').dataset.tabsCategory;

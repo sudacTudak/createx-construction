@@ -105,11 +105,12 @@
     .choices {
         position: relative;
         border-radius: var(--border-radius);
+        margin-bottom: 0;
 
         &__item {
             font-size: 14px;
             line-height: 150%;
-            color: var(--color-storm);
+            color: var(--color-gray);
         }
     
         &__list {
@@ -125,8 +126,28 @@
         }
     
         &__item.is-highlighted {
-            background-color: var(--color-primary);
-            color: var(--color-light);
+            &:not(:first-child) {
+                background-color: var(--color-primary);
+                color: var(--color-light);
+            }
+        }
+
+        &.is-invalid {
+            .choices__inner {
+                border-color: var(--color-danger);
+            }
+        }
+    }
+
+    .error-message {
+        display: none;
+        color: var(--color-danger);
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 150%;
+
+        &.is-active {
+            display: block;
         }
     }
 

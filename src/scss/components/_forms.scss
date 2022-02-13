@@ -109,6 +109,7 @@
     }
 
     &__input {
+        position: relative;
         background-color: var(--color-athens);
         border: 1px solid #d7dadd;
         border-radius: var(--border-radius);
@@ -139,6 +140,25 @@
                 0px 12px 10px -6px rgba(255, 90, 48, 0.04), 
                 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
         }
+
+        &.is-invalid {
+            border-color: var(--color-danger);
+        }
+    }
+
+    .label-is-invalid, .label-is-success {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    .label-is-invalid {
+        color: var(--color-danger);
+
+    }
+
+    .label-is-success {
+        color: var(--color-success);
     }
 
     &--contacts {
@@ -231,7 +251,6 @@
     &__text:active {
         color: var(--color-active);
     }
-
 }
 
 .form-file {
@@ -256,6 +275,21 @@
 
     &__text:active {
         color: var(--color-active);
+    }
+
+    .label-is-invalid, .label-is-success {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    .label-is-invalid {
+        color: var(--color-danger);
+
+    }
+
+    .label-is-success {
+        color: var(--color-success);
     }
 }
 

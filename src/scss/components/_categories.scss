@@ -51,11 +51,6 @@
             border-color var(--transition-time) ease-in-out,
             background-color var(--transition-time) ease-in-out;
 
-        &--active {
-            color: var(--color-primary);
-            border-color: currentColor;
-        }
-
         &.focus-visible  {
             outline: 2px solid var(--color-primary);
             outline-offset: 2px;
@@ -70,6 +65,11 @@
             background-color: var(--color-active);
             color: var(--color-light);
         }
+    }
+
+    .nav-tabs__btn--active {
+        color: var(--color-primary);
+        border-color: currentColor;
     }
 }
 

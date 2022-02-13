@@ -6,6 +6,7 @@ import '../scss/positions.scss';
 import 'focus-visible';
 import './go-top';
 import {transitionTime} from './cssProperties';
+import './forms';
 
 const selectsModal = document.querySelectorAll('.modal .form-field__select');
 

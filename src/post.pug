@@ -135,13 +135,13 @@ block content
                         .post-form__content 
                             label.post-form__field.form-field.form-field
                                 span.form-field__caption Name* 
-                                input.form-field__input(type="text" name="name" placeholder="Your name")
+                                input.form-field__input(type="text" name="name" placeholder="Your name" data-req)
                             label.post-form__field.form-field.form-field
                                 span.form-field__caption Email* 
-                                input.form-field__input(type="email" name="email" placeholder="Your working email")
+                                input.form-field__input(type="email" name="email" placeholder="Your working email" data-req)
                             label.post-form__field.form-field.form-field.post-form__field--big
                                 span.form-field__caption Your comment* 
-                                textarea.form-field__input(name="comment" placeholder="Type comment here")
+                                textarea.form-field__input(name="message" placeholder="Type comment here" data-req)
                             button.post-form__btn.btn.btn--fill-primary.btn--large Post Comment
         section.contacts-section 
             .contacts-section__container.container
@@ -150,16 +150,16 @@ block content
                     h2.form-contacts__title.form-title A&nbsp;quick way to&nbsp;discuss details
                     label.form-contacts__field.form-field.form-field--contacts
                         span.form-field__caption Name* 
-                        input.form-field__input(type="text" name="name" placeholder="Your name")
+                        input.form-field__input(type="text" name="name" placeholder="Your name" data-req)
                     label.form-contacts__field.form-field.form-field--contacts
                         span.form-field__caption Phone* 
-                        input.form-field__input(type="tel" name="phone" placeholder="Your phone number")
+                        input.form-field__input(type="tel" name="phone" placeholder="Your phone number" data-req)
                     label.form-contacts__field.form-field.form-field--contacts
                         span.form-field__caption Email 
                         input.form-field__input(type="email" name="email" placeholder="Your working email")
                     label.form-contacts__field.form-field.form-field--contacts
                         span.form-field__caption Message* 
-                        textarea.form-field__input.form-field__input--big(name="message" placeholder="Your message")
+                        textarea.form-field__input.form-field__input--big(name="message" placeholder="Your message" data-req)
                     label.form-contacts__checkbox.form-checkbox 
                         input.form-checkbox__input(type="checkbox")
                         span.form-checkbox__text.

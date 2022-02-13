@@ -88,13 +88,13 @@ block content
                     .form-values__content
                         label.form-values__field.form-field 
                             span.form-values__caption.form-field__caption Name
-                            input.form-values__input.form-field__input(type="text" placeholder="Your name") 
+                            input.form-values__input.form-field__input(type="text" name="name" placeholder="Your name") 
                         label.form-values__field.form-field 
                             span.form-values__caption.form-field__caption Phone
-                            input.form-values__input.form-field__input(type="tel" placeholder="Your phone") 
+                            input.form-values__input.form-field__input(type="tel" name="phone" placeholder="Your phone") 
                         label.form-values__field.form-values__field--big.form-field
                             span.form-values__caption.form-field__caption Message
-                            input.form-values__input.form-field__input(type="text" placeholder="Your message") 
+                            input.form-values__input.form-field__input(type="text" name="message" placeholder="Your message") 
                         button.form-values__btn.btn.btn--fill-primary.btn--regular(type="submit") Send
         section.services-section 
             .container
@@ -317,16 +317,16 @@ block content
                     h2.form-contacts__title.form-title A&nbsp;quick way to&nbsp;discuss details
                     label.form-contacts__field.form-field.form-field--contacts
                         span.form-field__caption Name* 
-                        input.form-field__input(type="text" name="name" placeholder="Your name")
+                        input.form-field__input(type="text" name="name" placeholder="Your name" data-req)
                     label.form-contacts__field.form-field.form-field--contacts
                         span.form-field__caption Phone* 
-                        input.form-field__input(type="tel" name="phone" placeholder="Your phone number")
+                        input.form-field__input(type="tel" name="phone" placeholder="Your phone number" data-req)
                     label.form-contacts__field.form-field.form-field--contacts
                         span.form-field__caption Email 
                         input.form-field__input(type="email" name="email" placeholder="Your working email")
                     label.form-contacts__field.form-field.form-field--contacts
                         span.form-field__caption Message* 
-                        textarea.form-field__input.form-field__input--big(name="message" placeholder="Your message")
+                        textarea.form-field__input.form-field__input--big(name="message" placeholder="Your message" data-req)
                     label.form-contacts__checkbox.form-checkbox 
                         input.form-checkbox__input(type="checkbox" name="communicationAgree")
                         span.form-checkbox__text.

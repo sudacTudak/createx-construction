@@ -1,6 +1,5 @@
 @use 'utils' as uts;
 
-footer{}
 //===============================================
 .footer {
     padding: 80px 0;
@@ -119,7 +118,8 @@ footer{}
     }
 
     &__body {
-        @include uts.flex-ver-center();
+        display: flex;
+        align-items: flex-start;
         margin-bottom: 17px;
     }
 

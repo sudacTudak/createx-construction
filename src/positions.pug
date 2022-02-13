@@ -93,16 +93,16 @@ block content
                     h2.form-contacts__title.form-title A&nbsp;quick way to&nbsp;discuss details
                     label.form-contacts__field.form-field.form-field--contacts
                         span.form-field__caption Name* 
-                        input.form-field__input(type="text" name="name" placeholder="Your name")
+                        input.form-field__input(type="text" name="name" placeholder="Your name" data-req)
                     label.form-contacts__field.form-field.form-field--contacts
                         span.form-field__caption Phone* 
-                        input.form-field__input(type="tel" name="phone" placeholder="Your phone number")
+                        input.form-field__input(type="tel" name="phone" placeholder="Your phone number" data-req)
                     label.form-contacts__field.form-field.form-field--contacts
                         span.form-field__caption Email 
                         input.form-field__input(type="email" name="email" placeholder="Your working email")
                     label.form-contacts__field.form-field.form-field--contacts
                         span.form-field__caption Message* 
-                        textarea.form-field__input.form-field__input--big(name="message" placeholder="Your message")
+                        textarea.form-field__input.form-field__input--big(name="message" placeholder="Your message" data-req)
                     label.form-contacts__checkbox.form-checkbox 
                         input.form-checkbox__input(type="checkbox")
                         span.form-checkbox__text.
@@ -115,41 +115,42 @@ block content
                     h3.modal-item__title Subscribe to&nbsp;our newsletter
                     button.modal-item__close(data-modal-close)
                 .modal-item__body
-                    form.modal-item__form.form-modal.form-modal--subscribe(action="POST")
+                    form.modal-item__form.form-modal.form-modal--subscribe(action="#")
                         .form-modal__fields  
                             label.form-modal__field.form-field
                                 span.form-field__caption Name* 
-                                input.form-field__input(type="text" name="name" placeholder="Your name")
+                                input.form-field__input(type="text" name="name" placeholder="Your name" data-req)
                             label.form-modal__field.form-field
                                 span.form-field__caption Email* 
-                                input.form-field__input(type="email" name="email" placeholder="Your working email")
+                                input.form-field__input(type="email" name="email" placeholder="Your working email" data-req)
                         button.form-modal__btn.btn.btn--fill-primary.btn--regular(type="submit") Send
             .modal__window.modal-item.modal-item--cv(data-modal-name='Modal-CV')
                 .modal-item__header
                     h3.modal-item__title Send your&nbsp;CV
                     button.modal-item__close(data-modal-close)
                 .modal-item__body
-                    form.modal-item__form.form-modal.form-modal--cv(action="#" method="POST" enctype="multipart/form-data") 
+                    form.modal-item__form.form-modal.form-modal--cv(action="#" enctype="multipart/form-data") 
                         .form-modal__fields 
                             label.form-modal__field.form-field
                                 span.form-field__caption Name* 
-                                input.form-field__input(type="text" name="name" placeholder="Your name")
+                                input.form-field__input(type="text" name="name" placeholder="Your name" data-req)
                             label.form-modal__field.form-field
                                 span.form-field__caption Location*
-                                select.form-field__select(name="Location")
+                                select.form-field__select(name="location" data-req)
                                     option(value="") Choose your location
                                     option(value="New-York") New-York
                                     option(value="Los-Angeles") Los-Angeles
+                                .error-message
                             label.form-modal__field.form-field
                                 span.form-field__caption Phone*
-                                input.form-field__input(type="tel" name="tel" placeholder="Your working email")
+                                input.form-field__input(type="tel" name="tel" placeholder="Your working email" data-req)
                             label.form-modal__field.form-field
                                 span.form-field__caption Email* 
-                                input.form-field__input(type="email" name="email" placeholder="Your working email")
+                                input.form-field__input(type="email" name="email" placeholder="Your working email" data-req)
                             label.form-modal__field.form-field
                                 span.form-field__caption Сovering letter
                                 textarea.form-field__input.form-field__input--big(name="message" placeholder="Your covering letter")
                         label.form-modal__file.form-file
                             span.form-file__text Attach your CV*
-                            input.form-file__input(type="file")
+                            input.form-file__input(type="file" name="file" accept="application/pdf, image/jpeg, image/png" data-req)
                         button.form-modal__btn.btn.btn--fill-primary.btn--regular(type="submit") Send

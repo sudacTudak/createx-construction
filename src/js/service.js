@@ -5,6 +5,7 @@ import '../scss/service.scss';
 import './go-top';
 import 'focus-visible';
 import { gridGap, transitionTime } from './cssProperties';
+import './forms';
 
 const startCounter = () => {
     const counters = document.querySelectorAll('.how-we-do__counter');

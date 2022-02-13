@@ -4,6 +4,7 @@ import 'focus-visible';
 import Swiper, {Navigation, Thumbs, Scrollbar} from 'swiper';
 import 'swiper/css';
 import {gridGap, transitionTime} from './cssProperties';
+import './forms';
 
 const historyNavWrap = document.querySelector('.nav-history');
 const historySliderWrap = document.querySelector('.slider-history');
