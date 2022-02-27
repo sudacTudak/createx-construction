@@ -96,6 +96,10 @@
     line-height: 150%;
     color: var(--color-gray-dark);
     text-align: center;
+
+    @include uts.mobile() {
+        font-size: 26px;
+    }
 }
 
 .form-field {
@@ -389,10 +393,18 @@
     &__title {
         width: 100%;
         margin-bottom: 24px;
+
+        @include uts.mobile() {
+            margin-bottom: 20px;
+        }
     }
 
     &__field {
         margin-bottom: 24px;
+
+        @include uts.mobile() {
+            margin-bottom: 20px;
+        }
     }
 
     &__field:last-child {
@@ -405,6 +417,10 @@
 
     &__btn {
         align-self: center;
+    }
+
+    @include uts.mobile() {
+        padding: 25px 15px;
     }
 }
 

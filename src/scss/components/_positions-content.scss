@@ -4,16 +4,36 @@
     padding: 120px 0 100px;
     &__info {
         gap: var(--grid-gap);
+
+        @include uts.minitablet() {
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
 
     &__column {
         &--left {
             grid-column: 7 span;
+
+            @include uts.tablet() {
+                grid-column: 12 span;
+            }
+
+            @include uts.minitablet() {
+                grid-column: 4 span;
+            }
         }
 
         &--right {
             @include uts.flex-hor-end();
             grid-column: 5 span;
+
+            @include uts.tablet() {
+                grid-column: 12 span;
+            }
+
+            @include uts.minitablet() {
+                grid-column: 4 span;
+            }
         }
     }
 
@@ -21,6 +41,16 @@
         &:not(:last-child) {
             margin-bottom: 24px;
         }
+    }
+
+    @include uts.minitablet() {
+        padding-top: 100px;
+        padding-bottom: 80px;
+    }
+
+    @include uts.mobile() {
+        padding-top: 80px;
+        padding-bottom: 60px;
     }
 }
 
@@ -33,6 +63,10 @@
 
     &__info {
         flex: 1 1 auto;
+
+        @media (max-width: 650px) {
+            margin-bottom: 20px;
+        }
     }
 
     &__meta {
@@ -44,6 +78,23 @@
         font-size: 20px;
         line-height: 150%;
         color: var(--color-gray-dark);
+
+        @include uts.mobile() {
+            font-size: 16px;
+        }
+    }
+
+    &__link {
+        align-self: flex-end;
+    }
+
+    @media (max-width: 650px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    @include uts.mobile() {
+        padding: 15px;
     }
 }
 
@@ -88,6 +139,10 @@
         line-height: 150%;
         color: var(--color-gray-dark);
         margin-bottom: 23px;
+
+        @include uts.mobile() {
+            margin-bottom: 17px;
+        }
     }
 
     &__text {
@@ -95,10 +150,18 @@
         line-height: 150%;
         color: var(--color-gray);
         margin-bottom: 50px;
+
+        @include uts.mobile() {
+            margin-bottom: 25px;
+        }
     }
 
     &__footer {
         @include uts.flex-all-sb();
+
+        @include uts.mobile() {
+            justify-content: flex-start;
+        }
     }
 
     &__btn {
@@ -107,12 +170,29 @@
         &--subs {
             padding-right: 44px;
             padding-left: 44px;
+
+            @include uts.mobile() {
+                padding: 10px 20px;
+            }
         }
 
         &--cv {
             padding-right: 52px;
             padding-left: 53px;
+            @include uts.mobile() {
+                padding: 10px 30px;
+            }
         }
+
+        @include uts.mobile() {
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    @include uts.mobile() {
+        width: 100%;
     }
 }
 

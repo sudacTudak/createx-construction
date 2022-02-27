@@ -1,27 +1,28 @@
 @use '../utils' as uts;
 
-.item-portfolio{
+.item-portfolio {
     background-color: var(--color-light);
     border-radius: var(--border-radius);
     display: block;
     @include uts.box-shadow();
     overflow: hidden;
-    max-height: 440px;
     height: 100%;
 
-    &__img {
-        max-width: 100%;
+    &__image {
+        width: 100%;
         object-fit: cover;
     }
 
     &__content {
         @include uts.flex-col-hor-center;
         background-color: var(--color-light);
+        position: relative;
+        z-index: 1;
         text-align: center;
         padding-top: 16px;
         padding-bottom: 24px;
-        transform: translateY(0);
-        transition: transform var(--transition-time) ease-in-out;
+        transition: margin-top var(--transition-time) ease-in-out;
+        margin-top: 0;
     }
 
     &__title {
@@ -41,7 +42,11 @@
     }
 
     &__btn {
+        opacity: 0;
+        visibility: hidden;
         margin-top: 25px;
+        margin-bottom: -69px;
+        transition: margin-bottom var(--transition-time) ease-in-out;
     }
 
     &.focus-visible  {
@@ -49,9 +54,17 @@
         outline-offset: 2px;
     }
 
-    &:hover {
-        .item-portfolio__content {
-            transform: translateY(-69px);
+    @media (min-width: 767px) {
+        &:hover {
+            .item-portfolio__btn {
+                margin-bottom: 0;
+                opacity: 1;
+                visibility: visible;
+            }
+    
+            .item-portfolio__content {
+                margin-top: -69px;
+            }
         }
     }
 }

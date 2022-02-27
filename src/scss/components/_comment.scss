@@ -4,12 +4,17 @@
     display: flex;
 
     &__info {
-        flex: 0 0 180px;
+        flex: 0 1 180px;
         padding-right: 30px;
+
+        @include uts.minitablet() {
+            padding-right: 0;
+            margin-bottom: 10px;
+        }
     }
 
     &__body {
-        flex: 0 0 630px;
+        flex: 0 1 630px;
     }
 
     &__author {
@@ -19,6 +24,11 @@
         color: var(--color-gray-dark);
         display: block;
         margin-bottom: 9px;
+
+        @include uts.minitablet() {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
     }
 
     &__time {
@@ -53,6 +63,11 @@
             &:active {
                 color: var(--color-active);
             }
+        }
+
+        @include uts.minitablet() {
+            font-size: 14px;
+            margin-bottom: 10px;
         }
     }
 
@@ -91,5 +106,9 @@
         &:active {
             color: var(--color-active);
         }
+    }
+
+    @include uts.minitablet() {
+        display: block;
     }
 }

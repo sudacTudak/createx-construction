@@ -6,6 +6,18 @@
 
     &__title {
         margin-bottom: 48px;
+
+        @include uts.tablet() {
+            margin-bottom: 40px;
+        }
+
+        @include uts.minitablet() {
+            margin-bottom: 35px;
+        }
+
+        @include uts.mobile() {
+            margin-bottom: 25px;
+        }
     }
 
     &__content {
@@ -14,6 +26,11 @@
         align-items: flex-start;
         justify-content: center;
         margin: 0 -15px;
+
+        @include uts.mobile() {
+            display: block;
+            margin: 0;
+        }
     }
 
     &__field {
@@ -34,15 +51,49 @@
             }
         }
 
+        @include uts.mobile() {
+            padding: 0;
+            margin-bottom: 10px;
+        }
+
         &--big {
             flex: 0 0 100%;
             margin-top: 22px;
             margin-bottom: 49px;
+
             .form-field__input {
                 padding: 13px 16px;
                 height: 100px;
                 resize: none;
             }
+
+            @include uts.minitablet() {
+                margin-bottom: 25px;
+            }
+
+            @include uts.mobile() {
+                margin-bottom: 15px;
+                margin-top: 15px;
+            }
         }
+    }
+
+    &__btn {
+        @include uts.mobile() {
+            display: block;
+            margin-left: auto;
+        }
+    }
+
+    @include uts.tablet() {
+        padding-top: 30px;
+    }
+
+    @include uts.minitablet() {
+        padding-top: 20px;
+    }
+
+    @include uts.mobile() {
+        padding-top: 10px;
     }
 }

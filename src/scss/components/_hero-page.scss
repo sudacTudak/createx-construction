@@ -6,6 +6,14 @@
 
     &__breadcrumps {
         margin-bottom: 41px;
+
+        @include uts.minitablet() {
+            margin-bottom: 30px;
+        }
+
+        @include uts.mobile() {
+            margin-bottom: 20px;
+        }
     }
 
     &--services {
@@ -13,6 +21,19 @@
         background-position: right -9px top;
         background-repeat: no-repeat;
         padding: 152px 0 178px;
+
+        @include uts.minidesk() {
+            background-image: initial;
+        }
+
+        @include uts.minitablet() {
+            padding-top: 130px;
+            padding-bottom: 100px;
+        }
+
+        @include uts.mobile() {
+            padding-top: 120px;
+        }
     }
 
     &--service {
@@ -20,6 +41,19 @@
         background-position: right -7px center;
         background-repeat: no-repeat;
         padding: 152px 0 114px;
+
+        @include uts.minidesk() {
+            background-image: initial;
+        }
+
+        @include uts.minitablet() {
+            padding-top: 130px;
+            padding-bottom: 100px;
+        }
+
+        @include uts.mobile() {
+            padding-top: 120px;
+        }
     }
 
     &--work {
@@ -27,6 +61,18 @@
         background-position: right -9px center;
         background-repeat: no-repeat;
         padding: 152px 0px 177px;
+
+        @include uts.minidesk() {
+            background-image: initial;
+        }
+
+        @include uts.minitablet() {
+            padding: 120px 0;
+        }
+
+        @include uts.mobile() {
+            padding-top: 80px;
+        }
     }
 
     &--work-inner {
@@ -35,6 +81,16 @@
         background-position: right -9px top 48px;
         background-repeat: no-repeat;
         padding: 152px 0 80px;
+
+        @include uts.minitablet() {
+            padding-top: 120px;
+            padding-bottom: 60px;
+        }
+
+        @include uts.mobile() {
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
     }
 
     &--about-us {
@@ -42,6 +98,18 @@
         background-position: right -9px bottom 3px, right -8px bottom 3px;
         background-repeat: no-repeat, no-repeat;
         padding: 152px 0 180px;
+
+        @include uts.minidesk() {
+            background-image: initial;
+        }
+
+        @include uts.minitablet() {
+            padding: 120px 0;
+        }
+
+        @include uts.mobile() {
+            padding: 100px 0;
+        }
     }
 
     &--positions {
@@ -49,6 +117,19 @@
         background-image: url("@img/hero-positions/hero-positions-bg.png");
         background-position: right -9px bottom 1px;
         background-repeat: no-repeat;
+
+        @include uts.minidesk() {
+            background-image: initial;
+        }
+
+        @include uts.minitablet() {
+            padding-top: 130px;
+            padding-bottom: 100px;
+        }
+
+        @include uts.mobile() {
+            padding-top: 120px;
+        }
     }
 
     &--news {
@@ -56,6 +137,20 @@
         background-image: url("@img/hero-news/hero-news-bg.png");
         background-position: right -9px bottom;
         background-repeat: no-repeat;
+
+        @include uts.minidesk() {
+            background-position: right -300px bottom;
+        }
+
+        @include uts.tablet() {
+            padding: 130px 0 150px;
+            background-image: initial;
+        }
+
+        @include uts.minitablet() {
+            padding: 100px 0 110px;
+            background-image: initial;
+        }
     }
 
     &--post {
@@ -64,6 +159,18 @@
         .block-main {
             &__title {
                 max-width: 100%;
+
+                @include uts.middledesk() {
+                    font-size: 50px;
+                }
+
+                @include uts.tablet() {
+                    font-size: 42px;
+                }
+
+                @include uts.mobile() {
+                    font-size: 34px;
+                }
             }
         }
     }
@@ -73,5 +180,22 @@
         background-image: url("@img/hero-contacts/hero-contacts-bg.png");
         background-position: right -9px bottom;
         background-repeat: no-repeat;
+
+        @include uts.middledesk() {
+            background-position: right -100px bottom;
+        }
+
+        @include uts.minidesk() {
+            background-position: right -300px bottom;
+        }
+
+        @include uts.tablet() {
+            background-image: initial;
+            padding: 100px 0 140px;
+        }
+
+        @include uts.minitablet() {
+            padding: 80px 0 100px;
+        }
     }
 }

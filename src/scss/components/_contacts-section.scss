@@ -9,5 +9,13 @@
         display: flex;
         justify-content: flex-end;
     }
+
+    @include uts.minitablet() {
+        padding: 70px 0;
+    }
+
+    @include uts.mobile() {
+        padding: 60px 0;
+    }
 }
 

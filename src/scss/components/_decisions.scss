@@ -4,13 +4,33 @@
     background-color: var(--color-athens);
     padding-top: 81px;
 
+    &__container {
+        @media (max-width: 930px) {
+            display: block;
+        }
+    }
+
     &__column {
         grid-column: 6 span;
         &--right {
             padding-left: 15px;
+
+            @include uts.mobile() {
+                padding-left: 0px;
+            }
         }
 
         &--left {
+        }
+
+        @include uts.tablet() {
+            &--right {
+                grid-column: 8 span;
+            }
+
+            &--left {
+                grid-column: 4 span;
+            }
         }
     }
 
@@ -19,14 +39,40 @@
         object-fit: cover;
         margin-bottom: -60px;
         z-index: 10;
+        width: 100%;
+
+        // @include uts.minidesk() {
+        //     width: 350px;
+        //     height: 100%;
+        //     margin-bottom: -50px;
+        // }
+
+        @media (max-width: 930px) {
+            display: none;
+        }
     }
 
     &__title {
+        @include uts.minidesk() {
+            margin-bottom: 30px;
 
+            .block-title__title {
+                font-size: 40px;
+            }
+        }
+
+        @include uts.minitablet() {
+            .block-title__title {
+                font-size: 34px;
+            }
+        }
+
+        @include uts.mobile() {
+            margin-bottom: 20px;
+        }
     }
 
     &__list {
-
     }
 
     &__item {
@@ -39,6 +85,35 @@
         
         &:not(:last-child) {
             margin-bottom: 20px;
+
+            @include uts.mobile() {
+                margin-bottom: 15px;
+            }
         }
+
+        @include uts.minidesk() {
+            background-position: left top 3px;
+        }
+
+        @media (max-width: 930px) {
+            display: block;
+        }
+
+        @include uts.mobile() {
+            font-size: 14px;
+            padding-left: 28px;
+        }
+    }
+
+    @include uts.tablet() {
+        padding-bottom: 50px;
+    }
+
+    @include uts.minitablet() {
+        padding-top: 60px;
+    }
+
+    @include uts.mobile() {
+        padding-top: 40px;
     }
 }

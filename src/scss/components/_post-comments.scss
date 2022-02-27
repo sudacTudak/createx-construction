@@ -7,6 +7,22 @@
     &__item {
         &:not(:last-child) {
             margin-bottom: 60px;
+
+            @include uts.minitablet() {
+                margin-bottom: 30px;
+            }
         }
+    }
+
+    @include uts.tablet() {
+        padding-bottom: 60px;
+    }
+
+    @include uts.minitablet() {
+        padding-bottom: 50px;
+    }
+
+    @include uts.mobile() {
+        padding-bottom: 40px;
     }
 }

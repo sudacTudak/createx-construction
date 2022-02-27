@@ -25,9 +25,28 @@
         margin: 0 auto;
         max-width: 736px;
         gap: 48px;
+
+        @include uts.minitablet() {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include uts.mobile() {
+            display: block;
+        }
     }
 
     &__item {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @include uts.tablet() {
+        padding: 120px 0;
+    }
+
+    @include uts.minitablet() {
+        padding: 80px 0;
     }
 }
 
@@ -94,6 +113,10 @@
         font-size: 14px;
         line-height: 150%;
         color: var(--color-gray-dark);
+    }
+
+    @include uts.minitablet() {
+        @include uts.flex-col-all-center();
     }
 }
 

@@ -20,6 +20,14 @@
         padding-top: 80px;
         padding-bottom: 40px;
         background-color: var(--color-light);
+
+        @include uts.minitablet() {
+            padding-top: 60px;
+        }
+
+        @include uts.mobile() {
+            padding-top: 40px;
+        }
     }
 
     &__body {
@@ -78,6 +86,11 @@
                 left: 0;
                 background: url("@img/icons/braces.svg") left top / cover no-repeat;
             }
+
+            @include uts.mobile() {
+                padding-left: 0;
+                padding-top: 45px;
+            }
         }
 
         ul {
@@ -95,6 +108,14 @@
                 }
             }
         }
+
+        @include uts.minitablet() {
+            margin-bottom: 50px;
+        }
+
+        @include uts.mobile() {
+            margin-bottom: 40px;
+        }
     }
 
     &__share {
@@ -109,11 +130,11 @@
         }
     }
 
-    &__comments {
-        
+    @include uts.minitablet() {
+        padding-bottom: 60px;
     }
 
-    &__form {
-
+    @include uts.mobile() {
+        padding-bottom: 40px;
     }
 }

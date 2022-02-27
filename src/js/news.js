@@ -4,6 +4,7 @@ import '../scss/news.scss';
 import 'focus-visible';
 import './go-top';
 import './forms';
+import './adaptive-header';
 
 const newsList = document.querySelector('.categories__news')
 

@@ -17,6 +17,10 @@
         padding: 0;
         margin-bottom: 24px;
         border: none;
+
+        @include uts.mobile() {
+            margin-bottom: 15px;
+        }
     }
     
     &__body {
@@ -27,6 +31,10 @@
         font-size: 28px;
         line-height: 150%;
         color: var(--color-gray-dark);
+
+        @include uts.mobile() {
+            font-size: 26px;
+        }
     }
 
     &__close {
@@ -71,6 +79,11 @@
                 background-color: var(--color-active);
             }
         }
+    }
+
+    @media (max-width: 530px) {
+        width: 90%;
+        padding: 48px 24px;
     }
 }
 

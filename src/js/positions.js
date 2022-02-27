@@ -7,6 +7,7 @@ import 'focus-visible';
 import './go-top';
 import {transitionTime} from './cssProperties';
 import './forms';
+import './adaptive-header';
 
 const selectsModal = document.querySelectorAll('.modal .form-field__select');
 

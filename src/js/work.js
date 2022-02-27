@@ -3,6 +3,7 @@ import '../scss/work.scss';
 import './go-top';
 import 'focus-visible';
 import './forms';
+import './adaptive-header';
 
 const loadMoreBtn = document.querySelector('.load-more-portfolio__btn');
 const portfolioList = document.querySelector('.portfolio__tabs-list');

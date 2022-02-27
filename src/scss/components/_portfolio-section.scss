@@ -6,10 +6,25 @@
     &__top {
         @include uts.flex-all-sb();
         margin-bottom: 48px;
+
+        @include uts.mobile() {
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-bottom: 10px;
+        }
     }
 
     &__title {
         max-width: 705px;
+
+        @include uts.mobile() {
+            max-width: initial;
+
+            .block-title__title {
+                padding-bottom: 0;
+                font-size: 26px;
+            }
+        }
     }
 
     &__works {
@@ -21,5 +36,9 @@
 
     &__explore {
         @include uts.flex-all-center;
+    }
+
+    @include uts.minitablet() {
+        padding: 80px 0;
     }
 }

@@ -5,7 +5,11 @@
 
     &__list {
         gap: var(--grid-gap);
-        counter-reset: section;
+
+        @include uts.minitablet() {
+            display: block;
+            padding-left: 20px;
+        }
     }
 
     &__item {
@@ -29,6 +33,17 @@
 
         &:not(:last-child) {
             background: url("@img/how-we-do/line.svg") right -4px top 28px no-repeat;
+        }
+
+        @include uts.tablet() {
+            grid-column: 6 span;
+            background: url("@img/how-we-do/line.svg") left 80px top 28px no-repeat !important;
+        }
+
+        @include uts.minitablet() {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
         }
     }
 
@@ -78,5 +93,15 @@
         font-size: 16px;
         line-height: 160%;
         color: var(--color-storm);
+    }
+
+    @include uts.minitablet() {
+        padding-top: 70px;
+        padding-bottom: 90px;
+    }
+
+    @include uts.mobile() {
+        padding-top: 60px;
+        padding-bottom: 70px;
     }
 }

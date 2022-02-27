@@ -1,3 +1,5 @@
+@use '../utils/' as uts;
+
 .clients {
     padding: 140px 0 121px;
     background-color: var(--color-light);
@@ -5,7 +7,26 @@
     &__list {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
-        gap: 102px;
+        column-gap: 102px;
+        row-gap: 40px;
+
+        @include uts.middledesk() {
+            column-gap: 50px;
+        }
+
+        @include uts.tablet() {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include uts.minitablet() {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__item {
+        @include uts.tablet() {
+            @include uts.flex-all-center();
+        }
     }
 
     &__link {
@@ -16,4 +37,15 @@
         }
     }
 
+    @include uts.tablet() {
+        padding: 100px 0;
+    }
+
+    @include uts.minitablet() {
+        padding: 70px 0 80px;
+    }
+
+    @include uts.mobile() {
+        padding: 50px 0 60px;
+    }
 }

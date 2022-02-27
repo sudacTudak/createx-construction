@@ -19,17 +19,13 @@ body {
     --transition-overlay-time: 0.3s;
 
     z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     &__overlay {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         cursor: pointer;
         opacity: 0;
         visibility: hidden;
         position: fixed;
+        text-align: center;
         top: 0;
         right: 0;
         left: 0;
@@ -38,19 +34,28 @@ body {
         overflow-y: auto;
         background-color: rgba(0, 0, 0, .5);
         transition: opacity var(--transition-overlay-time), visibility var(--transition-overlay-time);
+
+        &::before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
     }
 
     &__window {
         display: none;
         cursor: default;
-        margin: 50px 0;
+        margin: 50px auto;
         background-color: #fff;
         width: var(--width-modal-window);
         padding: 0 10px;
         border-radius: 20px;
+        vertical-align: middle;
+        text-align: left;
 
         &.modal-open {
-            display: block;
+            display: inline-block;
         }
 
 //<MODAL WINDOW ANIMATION>================================================================

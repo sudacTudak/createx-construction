@@ -8,11 +8,24 @@
         column-gap:var(--grid-gap);
         row-gap: 60px;
         margin-bottom: 80px;
+
+        @include uts.tablet() {
+            column-gap: 0px;
+            row-gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        @include uts.minitablet() {
+            grid-template-columns: repeat(4, 1fr);
+            margin-bottom: 30px;
+        }
     }
 
     &__item {
         grid-column: 3 span;
+        padding: 0 -15px;
         position: relative;
+        @include uts.flex-col-hor-center();
 
         &:hover {
             .team__socials {
@@ -20,10 +33,30 @@
                 visibility: visible;
             }
         }
+
+        @include uts.minidesk() {
+            grid-column: 4 span;
+            text-align: center;
+        }
+        
+        @include uts.tablet() {
+            grid-column: 6 span;
+        }
+
+        @include uts.minitablet() {
+            grid-column: 4 span;
+        }
+    }
+
+    &__top {
+        position: relative;
+        margin-bottom: 16px;
+        max-width: 285px;
     }
 
     &__image {
-        margin-bottom: 16px;
+        width: 100%;
+        object-fit: cover;
     }
 
     &__name {
@@ -47,7 +80,7 @@
         visibility: hidden;
         position: absolute;
         width: 100%;
-        bottom: 76px;
+        bottom: 0px;
         left: 0;
         transition: opacity var(--transition-time) ease-in-out, visibility var(--transition-time) ease-in-out;
     }
@@ -74,7 +107,15 @@
             &:active {
                 color: var(--color-active);
             }
+
+            @include uts.minitablet() {
+                display: block;
+            }
         }
+    }
+
+    @include uts.minitablet() {
+        padding: 60px 0;
     }
 }
 

@@ -66,6 +66,7 @@
 
         @include uts.tablet() {
             color: var(--color-light);
+            font-size: 18px;
         }
     }
 
@@ -84,6 +85,7 @@
     &.focus-visible {
         outline: 2px solid var(--color-primary);
         outline-offset: 2px;
+        border-radius: var(--border-radius);
     }
 
     &:hover {

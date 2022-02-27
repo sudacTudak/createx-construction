@@ -30,10 +30,10 @@
 
 //<ОСНОВНАЯ СЕТКА>
 .container {max-width: uts.$mw; margin: 0 auto; width: 100%; padding: 0 15px;
-	@media (max-width: (uts.$md1 + px)) {max-width: 970px;}
-	@media (max-width: (uts.$md2 + px)) {max-width: 750px;}
-	@media (max-width: (uts.$md3 + px)) {max-width: 476px;}
-	@media (max-width: (uts.$md4 + px)) {max-width: none;padding:0 10px;}
+	// @media (max-width: (uts.$md1 + px)) {max-width: 970px;}
+	// @media (max-width: (uts.$md2 + px)) {max-width: 750px;}
+	// @media (max-width: (uts.$md3 + px)) {max-width: 476px;}
+	// @media (max-width: (uts.$md4 + px)) {max-width: none;padding:0 10px;}
 }
 
 //</ОСНОВНАЯ СЕТКА>

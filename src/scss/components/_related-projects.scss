@@ -6,21 +6,50 @@
     &__top {
         @include uts.flex-all-sb();
         margin-bottom: 48px;
+
+        @include uts.mobile() {
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-bottom: 10px;
+        }
     }
 
     &__title {
         max-width: 705px;
+
+        @include uts.mobile() {
+            .block-title__title {
+                padding-bottom: 0;
+            }
+        }
     }
 
     &__works {
         .swiper-wrapper {
             padding: 0 30px 79px;
             margin: 0 -30px;
+
+            @include uts.mobile() {
+                padding-bottom: 60px;
+            }
+        }
+
+        .swiper-slide {
+            height: auto;
         }
     }
 
     &__explore {
         @include uts.flex-all-center;
+    }
+
+    @include uts.minitablet() {
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+
+    @include uts.mobile() {
+        padding-bottom: 70px;
     }
 }
 

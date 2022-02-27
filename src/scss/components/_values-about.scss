@@ -9,6 +9,18 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: var(--values-items-gap);
+
+        @include uts.tablet() {
+            --values-items-gap: 60px;
+        }
+
+        @include uts.minitablet() {
+            --values-items-gap: 30px;
+        }
+
+        @include uts.mobile() {
+            display: block;
+        }
     }
 
     &__item {
@@ -43,6 +55,16 @@
                 transform: translateX(50%);
             }
         }
+
+        @include uts.mobile() {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
     }
 
     &__subtitle {
@@ -58,6 +80,14 @@
         line-height: 160%;
         text-align: center;
         color: var(--color-storm);
+
+        @include uts.mobile() {
+            max-width: 300px;
+        }
+    }
+
+    @include uts.minitablet() {
+        padding-bottom: 60px;
     }
 
 }

@@ -6,6 +6,7 @@ import './go-top';
 import 'focus-visible';
 import { gridGap, transitionTime } from './cssProperties';
 import './forms';
+import './adaptive-header';
 
 const startCounter = () => {
     const counters = document.querySelectorAll('.how-we-do__counter');
@@ -31,10 +32,18 @@ if (document.querySelector('.related-projects__works')) {
         speed: transitionTime,
         spaceBetween: gridGap,
         loop: true,
-        slidesPerView: 3,
+        slidesPerView: 1,
         navigation: {
             nextEl: '.related-projects__next',
             prevEl: '.related-projects__prev'
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            }
         }
     })
 }

@@ -11,6 +11,18 @@
         grid-template-columns: repeat(3, 1fr);
         gap: var(--values-items-gap);
         margin-bottom: 30px;
+
+        @include uts.tablet() {
+            --values-items-gap: 60px;
+        }
+
+        @include uts.minitablet() {
+            --values-items-gap: 30px;
+        }
+
+        @include uts.mobile() {
+            display: block;
+        }
     }
 
     &__item {
@@ -45,6 +57,16 @@
                 transform: translateX(50%);
             }
         }
+
+        @include uts.mobile() {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
     }
 
     &__subtitle {
@@ -60,8 +82,15 @@
         line-height: 160%;
         text-align: center;
         color: var(--color-storm);
+
+        @include uts.mobile() {
+            max-width: 300px;
+        }
     }
 
+    @include uts.mobile() {
+        padding-top: 60px;
+    }
 }
 
 .form-values {
@@ -79,15 +108,38 @@
 
     &__content {
         @include uts.flex-ver-center();
+
+        @include uts.tablet() {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: -5px 0;
+        }
+
+        @include uts.mobile() {
+            justify-content: flex-end;
+        }
     }
 
     &__field {
-        width: 260px;
-
+        flex: 0 1 260px;
         margin-right: 24px;
 
         &--big {
-            width: 414px;
+            flex: 1 1 auto;
+        }
+
+        @include uts.tablet() {
+            flex: 0 0 48%;
+            margin-right: 0;
+            margin: 5px 0;
+
+            &--big {
+                flex: 1 1 100%;
+            }
+        }
+
+        @include uts.mobile() {
+            flex: 1 1 100%;
         }
     }
 
@@ -97,5 +149,29 @@
 
     &__btn {
         align-self: flex-end;
+
+        @include uts.tablet() {
+            margin-top: 10px;
+            margin-left: auto;
+        }
+
+        @include uts.mobile() {
+            margin-top: 10px;
+            margin-left: 0;
+        }
+    }
+
+    @include uts.minitablet() {
+        top: 20px;
+        padding: 38px 50px;
+    }
+    @include uts.mobile() {
+        top: 20px;
+        padding: 30px 15px;
+
+        .form-title {
+            font-size: 24px;
+            line-height: 34px;
+        }
     }
 }

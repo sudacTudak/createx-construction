@@ -2,7 +2,6 @@
 
 .hero {
 
-
     .hero-slide {
         background-color: var(--color-gray);
         background: url("@img/hero/hero-bg.png") center / cover no-repeat;
@@ -19,6 +18,21 @@
             background: linear-gradient(0deg, rgba(30, 33, 44, 0.6), rgba(30, 33, 44, 0.6));
             z-index: 5;
         }
+
+        @include uts.tablet() {
+            padding-top: 140px;
+            padding-bottom: 270px;
+        }
+
+        @include uts.minitablet() {
+            padding-bottom: 200px;
+        }
+
+        @include uts.mobile() {
+            padding-top: 100px;
+            padding-bottom: 170px;
+        }
+
     }
 
     &__content {
@@ -50,6 +64,10 @@
                 opacity: 0.5;
             }
         }
+
+        @include uts.middledesk() {
+            display: none;
+        }
     }
 
     &__prev {
@@ -66,6 +84,19 @@
         position: absolute;
         left: calc((100% - 1230px) / 2);
         bottom: 122px;
+
+        @include uts.middledesk() {
+            left: 2%;
+        }
+
+        @include uts.tablet() {
+            bottom: 80px;
+        }
+
+        @include uts.mobile() {
+            width: 100%;
+            left: 4%;
+        }
     }
 
     &__next {
@@ -98,6 +129,10 @@
             transform-origin: left;
             transform: scaleX(0);
         }
+
+        @include uts.mobile() {
+            margin-top: 5px;
+        }
     }
 
     .swiper-pagination-bullet {
@@ -113,6 +148,18 @@
 
         &:not(:last-child) {
             margin-right: 4px;
+        }
+
+        @include uts.minitablet() {
+            width: 133px;
+            font-size: 20px;
+            line-height: 32px;
+        }
+
+        @include uts.mobile() {
+            width: 20%;
+            font-size: 20px;
+            line-height: 32px;
         }
     }
 

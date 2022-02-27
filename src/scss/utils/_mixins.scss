@@ -27,6 +27,7 @@
 @mixin flex-col-ver-center() {display: flex; flex-direction:column; justify-content: center;}
 @mixin flex-col-all-center() {display: flex; flex-direction:column; justify-content: center; align-items: center;}
 @mixin flex-col-start() {display: flex; flex-direction:column; justify-content: flex-start;}
+@mixin flex-col-hor-start() {display: flex; flex-direction:column; align-items: flex-start;}
 @mixin flex-col-end() {display: flex; flex-direction:column; justify-content: flex-end;}
 
 //</ФЛЕКСЫ>

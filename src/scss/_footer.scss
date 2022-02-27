@@ -9,22 +9,58 @@
         display: grid;
         grid-template: auto / repeat(12, 1fr);
         gap: var(--grid-gap);
+
+        @include uts.mobile() {
+            grid-template: auto / repeat(4, 1fr);
+        }
     }
 
     &__about {
         grid-column: 7 span;
+
+        @include uts.minitablet() {
+            grid-column: 12 span;
+        }
+
+        @include uts.mobile() {
+            grid-column: 4 span;
+        }
     }
 
     &__form {
         grid-column: 5 span;
+
+        @include uts.minitablet() {
+            grid-column: 12 span;
+        }
+
+        @include uts.mobile() {
+            grid-column: 4 span;
+        }
     }
 
     &__contacts {
         grid-column: 4 span;
+
+        @include uts.minitablet() {
+            grid-column: 12 span;
+        }
+
+        @include uts.mobile() {
+            grid-column: 4 span;
+        }
     }
 
     &__nav {
         grid-column: 8 span;
+
+        @include uts.minitablet() {
+            grid-column: 12 span;
+        }
+
+        @include uts.mobile() {
+            grid-column: 4 span;
+        }
     }
 
     &__copyright {
@@ -37,6 +73,18 @@
             background: url("../img/footer/heart.svg") 3px center / 16px 16px no-repeat;
             padding-left: 23px;
         }
+
+        @include uts.minitablet() {
+            padding-top: 0;
+        }
+
+        @include uts.mobile() {
+            grid-column: 4 span;
+        }
+    }
+
+    @include uts.minitablet() {
+        padding: 40px 0;
     }
 }
 
@@ -44,6 +92,12 @@
     &__top {
         @include uts.flex-ver-center();
         margin-bottom: 25px;
+
+        @include uts.mobile() {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
     }
 
     &__logo {
@@ -54,6 +108,11 @@
             outline-offset: 2px;
             border-radius: var(--border-radius);
         }
+
+        @include uts.mobile() {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
     }
 
     &__description {
@@ -61,6 +120,10 @@
         font-size: 14px;
         line-height: 150%;
         color: rgba(255, 255, 255, 0.6);
+
+        @include uts.mobile() {
+            max-width: initial;
+        }
     }
 }
 
@@ -140,6 +203,10 @@
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
         font-size: 14px;
+
+        @include uts.tablet() {
+            padding: 10px 12px;
+        }
     }
 
     &__description {
@@ -206,10 +273,24 @@
     display: flex;
     padding-top: 20px;
     padding-left: 54px;
+
     &__column {
         &:not(:last-child) {
             margin-right: 125px;
         }
+
+        @include uts.minitablet() {
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+
+        // @include uts.mobile() {
+        //     &:not(:last-child) {
+        //         margin-right: 0;
+        //         margin-bottom: 30px;
+        //     }
+        // }
     }
 
     &__title {
@@ -241,5 +322,13 @@
             color: var(--color-active);
         }
     }
+
+    @include uts.minitablet() {
+        padding: 0;
+    }
+
+    // @include uts.mobile() {
+    //     display: block;
+    // }
 }
 //===============================================

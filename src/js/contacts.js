@@ -5,6 +5,7 @@ import 'choices.js/src/styles/choices.scss';
 import '../scss/contacts.scss';
 import {transitionTime} from './cssProperties';
 import './forms';
+import './adaptive-header';
 
 const selectsContactUs = document.querySelectorAll('.form-field__select');
 

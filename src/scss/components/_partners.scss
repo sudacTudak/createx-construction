@@ -1,3 +1,5 @@
+@use '../utils/' as uts;
+
 .partners {
     padding: 80px 0 61px;
     background-color: var(--color-athens);
@@ -7,17 +9,40 @@
         grid-template-columns: repeat(6, 1fr);
         column-gap: 102px;
         row-gap: 40px;
+
+        @include uts.middledesk() {
+            column-gap: 50px;
+        }
+
+        @include uts.tablet() {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include uts.minitablet() {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__item {
+        @include uts.tablet() {
+            @include uts.flex-all-center();
+        }
     }
 
     &--about-us {
         padding: 120px 0 100px;
         background-color: var(--color-light);
+
+        @include uts.minitablet() {
+            padding: 80px 0;
+        }
     }
 
     &__link {
         &.focus-visible  {
             outline: 2px solid var(--color-primary);
             outline-offset: 2px;
+            border-radius: var(--border-radius);
         }
     }
 }

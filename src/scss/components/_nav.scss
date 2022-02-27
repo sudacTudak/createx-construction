@@ -65,10 +65,11 @@
         height: 100%;
         transform: translateY(-200%);
         opacity: 0;
+        overflow-y: auto;
         visibility: hidden;
         z-index: 20;
         background-color: rgba(0, 0, 0, 0.7);
-        padding: 100px 20px 0px;
+        padding: 100px 20px 20px;
         transition:
             transform var(--open-menu-time) ease-in-out,
             opacity var(--open-menu-time) ease-in-out,

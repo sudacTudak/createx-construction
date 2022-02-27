@@ -52,4 +52,9 @@
         opacity: 1;
         visibility: visible;
     }
+
+    @media (max-width: 1260px) {
+        right: 15px;
+        bottom: 15px;
+    }
 }

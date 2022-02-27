@@ -18,6 +18,10 @@
             }
         }
         margin-bottom: 20px;
+
+        @include uts.mobile() {
+            margin-bottom: 10px;
+        }
     }
 
     &__slider-nav {
@@ -26,6 +30,10 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        @include uts.mobile() {
+            display: none;
+        }
     }
 
     &__prev, &__next {

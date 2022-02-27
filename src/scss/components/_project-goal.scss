@@ -4,16 +4,41 @@
     background-color: var(--color-light);
     padding: 60px 0 119px;
 
+    &__container {
+        @include uts.tablet() {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
     &__column {
         grid-column: 6 span;
 
+        &--left {
+            @include uts.tablet() {
+                margin-bottom: 30px;
+            }
+        }
+
         &--right {
             @include uts.flex-hor-end;
+
+            @include uts.mobile() {
+                align-self: flex-start;
+            }
         }
     }
 
     &__title {
         margin-bottom: 39px;
+
+        @include uts.minitablet() {
+            margin-bottom: 30px;
+        }
+
+        @include uts.mobile() {
+            margin-bottom: 20px;
+        }
     }
 
     &__description {
@@ -25,7 +50,19 @@
 
         &:not(:last-child) {
             margin-bottom: 27px;
+
+            @include uts.mobile() {
+                margin-bottom: 15px;
+            }
         }
+    }
+
+    @include uts.minitablet() {
+        padding-bottom: 70px;
+    }
+
+    @include uts.mobile() {
+        padding: 50px 0;
     }
 }
 
@@ -47,16 +84,33 @@
 
     &__field {
         width: 130px;
+        flex: 0 0 130px;
         font-weight: 700;
         font-size: 16px;
         line-height: 160%;
         color: var(--color-gray-dark);
         text-transform: uppercase;
+
+        @include uts.mobile() {
+            font-size: 14px;
+            width: 100px;
+            flex: 0 0 100px;
+        }
     }
 
     &__value {
         font-size: 16px;
         line-height: 160%;
         color: var(--color-storm);
+    }
+
+    @include uts.tablet() {
+        padding-right: 10px;
+        padding-left: 30px;
+        width: 100%;
+    }
+
+    @include uts.mobile() {
+        padding-left: 10px;
     }
 }
