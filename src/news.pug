@@ -1,7 +1,7 @@
 extends ./pug/layout/main
 
 block append vars
-    - var siteTitle = 'Createx Construction';
+    - var siteTitle = 'Createx Construction - News';
     - var pageClass = 'index-page';
 
 block content
@@ -10,7 +10,7 @@ block content
             .container 
                 ul.page-hero__breadcrumps.breadcrumps
                     li.breadcrumps__item 
-                        a.breadcrumps__link(href="index.html") Homepage
+                        a.breadcrumps__link(href="/") Homepage
                     li.breadcrumps__item 
                         a.breadcrumps__link News
                 .page-hero__content.block-main
@@ -41,12 +41,12 @@ block content
                                 +img('categories/01.jpg', 'Artical 1 Image')(class="article-news__image")
                                 .article-news__text 
                                     h3.article-news__title
-                                        a.article-news__link(href="#").
+                                        a.article-news__link(href="/post.html").
                                             How to&nbsp;Build Climate Change-Resilient Infrastructure 
                                     .article-news__meta.article-meta
                                         span.article-meta__item Industry News
                                         time.article-meta__item(datatime="2020-06-24 10:00") June 24, 2020
-                                        a.article-meta__item.article-meta__item--comments(href="") 4 comments
+                                        a.article-meta__item.article-meta__item--comments(href="/post.html") 4 comments
                                     p.article-news__description.
                                         Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis...
                         li.categories__item
@@ -54,12 +54,12 @@ block content
                                 +img('categories/02.jpg', 'Artical 2 Image')(class="article-news__image")
                                 .article-news__text 
                                     h3.article-news__title
-                                        a.article-news__link(href="#").
+                                        a.article-news__link(href="/post.html").
                                             How Construction Can Help Itself
                                     .article-news__meta.article-meta
                                         span.article-meta__item Innovation
                                         time.article-meta__item(datatime="2020-06-12 17:00") June 12, 2020
-                                        a.article-meta__item.article-meta__item--comments(href="") No comments
+                                        a.article-meta__item.article-meta__item--comments(href="/post.html") No comments
                                     p.article-news__description.
                                         Porta habitant vitae quam interdum. Leo viverra non volutpat rhoncus placerat vitae scelerisque. Rhoncus augue faucibus maecenas lacus...
                         li.categories__item
@@ -67,12 +67,12 @@ block content
                                 +img('categories/03.jpg', 'Artical 3 Image')(class="article-news__image")
                                 .article-news__text 
                                     h3.article-news__title
-                                        a.article-news__link(href="#").
+                                        a.article-news__link(href="/post.html").
                                             The Difference Between a&nbsp;Digger and an&nbsp;Excavator
                                     .article-news__meta.article-meta
                                         span.article-meta__item Expert Tips
                                         time.article-meta__item(datatime="2020-05-16 13:30") May 16, 2020
-                                        a.article-meta__item.article-meta__item--comments(href="#") No comments
+                                        a.article-meta__item.article-meta__item--comments(href="/post.html") No comments
                                     p.article-news__description.
                                         Cras est nisi purus velit facilisi vitae, dolor. Lorem scelerisque integer duis et&nbsp;nulla lobortis cursus. Viverra erat sollicitudin praesent viverra...
                         li.categories__item
@@ -80,12 +80,12 @@ block content
                                 +img('categories/04.jpg', 'Artical 4 Image')(class="article-news__image")
                                 .article-news__text 
                                     h3.article-news__title
-                                        a.article-news__link(href="#").
+                                        a.article-news__link(href="/post.html").
                                             Building Construction Hand Tools
                                     .article-news__meta.article-meta
                                         span.article-meta__item Expert Tips
                                         time.article-meta__item(datatime="2020-02-25 10:00") February 25, 2020
-                                        a.article-meta__item.article-meta__item--comments(href="#") 1 comment
+                                        a.article-meta__item.article-meta__item--comments(href="/post.html") 1 comment
                                     p.article-news__description.
                                         Tellus quis aliquet volutpat nunc pulvinar donec sed sapien. Vitae elit id&nbsp;dolor, tristique massa. Fames lobortis orci rutrum bibendum integer...
                         li.categories__item
@@ -93,12 +93,12 @@ block content
                                 +img('categories/05.jpg', 'Artical 5 Image')(class="article-news__image")
                                 .article-news__text 
                                     h3.article-news__title
-                                        a.article-news__link(href="#").
+                                        a.article-news__link(href="/post.html").
                                             Top&nbsp;10 Construction Trends 
                                     .article-news__meta.article-meta
                                         span.article-meta__item Industry News
                                         time.article-meta__item(datatime="2020-01-14 15:00") January 14, 2020
-                                        a.article-meta__item.article-meta__item--comments(href="") No comments
+                                        a.article-meta__item.article-meta__item--comments(href="/post.html") No comments
                                     p.article-news__description.
                                         Dignissim sed enim, eleifend morbi condimentum. Congue id&nbsp;quis vulputate dignissim eget. Ac&nbsp;ullamcorper nunc habitasse enim interdum platea...
                         li.categories__item
@@ -106,12 +106,12 @@ block content
                                 +img('categories/06.jpg', 'Artical 6 Image')(class="article-news__image")
                                 .article-news__text 
                                     h3.article-news__title
-                                        a.article-news__link(href="#").
+                                        a.article-news__link(href="/post.html").
                                             Types of&nbsp;Flooring Materials
                                     .article-news__meta.article-meta
                                         span.article-meta__item Company News
                                         time.article-meta__item(datatime="2019-12-01 12:00") December 1, 2019
-                                        a.article-meta__item.article-meta__item--comments(href="") No comments
+                                        a.article-meta__item.article-meta__item--comments(href="/post.html") No comments
                                     p.article-news__description.
                                         Maecenas donec lacinia nunc, quam sit magnis mauris. Neque bibendum et&nbsp;mauris, aenean. Vel arcu amet in&nbsp;sem parturient integer duis et&nbsp;nulla...
                 ul.categories__pagination.pagination-categories

@@ -10,9 +10,9 @@ block content
             .container 
                 ul.page-hero__breadcrumps.breadcrumps 
                     li.breadcrumps__item 
-                        a.breadcrumps__link(href="index.html") Homepage
+                        a.breadcrumps__link(href="/") Homepage
                     li.breadcrumps__item 
-                        a.breadcrumps__link(href="services.html") Services
+                        a.breadcrumps__link(href="/services.html") Services
                     li.breadcrumps__item 
                         a.breadcrumps__link Interior Design
                 .page-hero__content.block-main
@@ -96,21 +96,21 @@ block content
                 .swiper.related-projects__works
                     .swiper-wrapper
                         .swiper-slide 
-                            a.related-projects__item.item-portfolio(href="#")
+                            a.related-projects__item.item-portfolio(href="/work-inner.html")
                                 +img("related-projects/image_01.jpg", "Kids Bedroom With Decorations")(class="item-portfolio__image")
                                 .item-portfolio__content
                                     h3.item-portfolio__title Kids Bedroom With Decorations
                                     span.item-portfolio__description Apartments & flats
                                     .item-portfolio__btn.btn.btn--outline-primary.btn--regular View Project
                         .swiper-slide 
-                            a.related-projects__item.item-portfolio(href="#")
+                            a.related-projects__item.item-portfolio(href="/work-inner.html")
                                 +img("related-projects/image_01.jpg", "Modern Double Bedroom")(class="item-portfolio__image")
                                 .item-portfolio__content
                                     h3.item-portfolio__title Modern Double Bedroom
                                     span.item-portfolio__description Apartments & flats
                                     .item-portfolio__btn.btn.btn--outline-primary.btn--regular View Project
                         .swiper-slide 
-                            a.related-projects__item.item-portfolio(href="#")
+                            a.related-projects__item.item-portfolio(href="/work-inner.html")
                                 +img("related-projects/image_03.jpg", "Scandinavian Style Interior")(class="item-portfolio__image")
                                 .item-portfolio__content
                                     h3.item-portfolio__title Scandinavian Style Interior
@@ -118,7 +118,7 @@ block content
                                     .item-portfolio__btn.btn.btn--outline-primary.btn--regular View Project
                 .related-projects__explore.learn-more
                     h4.learn-more__subtitle Explore all our works
-                    a.learn-more__btn.btn.btn--fill-primary.btn--large(href="#") View Portfolio
+                    a.learn-more__btn.btn.btn--fill-primary.btn--large(href="/work.html") View Portfolio
         section.pricing 
             .container
                 .pricing__title.block-title.block-title--center 
@@ -213,11 +213,11 @@ block content
                             tr.table-pricing__row 
                                 td.table-pricing__col
                                 td.table-pricing__col 
-                                    button.table-pricing__btn.btn.btn--outline-primary.btn--small Send Request
+                                    a(href="/contacts.html").table-pricing__btn.btn.btn--outline-primary.btn--small Send Request
                                 td.table-pricing__col 
-                                    button.table-pricing__btn.btn.btn--outline-primary.btn--small Send Request
+                                    a(href="/contacts.html").table-pricing__btn.btn.btn--outline-primary.btn--small Send Request
                                 td.table-pricing__col 
-                                    button.table-pricing__btn.btn.btn--outline-primary.btn--small Send Request
+                                    a(href="/contacts.html").table-pricing__btn.btn.btn--outline-primary.btn--small Send Request
         section.partners 
             .container
                 .partners__title.block-title.block-title--center
