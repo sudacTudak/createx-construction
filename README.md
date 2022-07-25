@@ -1,12 +1,16 @@
-# _Template-Webpack-Pug
-Template builded on Webpack.
-{
+# createx-construction
+
+Multi-page website created with:
   PUG,
-  SCSS, PostCSS,
-  Babel,
-  MQPacker,
-  MinCSS,
-  CSV, XML, JSON,
-  Stats,
-  DevServer, HMR
-}
+  SCSS,
+  JS,
+  Adaptive,
+  Webpack 5
+  
+UI-Elements:
+  Swiper,
+  Tabs,
+  Breadcrumpos,
+  Collapse,
+  Modals,
+  Mobile menu
